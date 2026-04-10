@@ -1,5 +1,7 @@
 out/
 reports/
+obj_dir/
 *.vvp
 *.vcd
 __pycache__/
+*.log
