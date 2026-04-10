@@ -1,0 +1,10 @@
+read_verilog /foss/designs/URECA/ureca_designs/rtl/fsm.v
+hierarchy -check -top fsm
+proc; opt; fsm; opt;
+synth -top fsm
+dfflibmap -liberty /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80.lib
+abc -liberty /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80.lib
+clean
+write_verilog -noattr /foss/designs/URECA/ureca_designs/out/fsm_netlist.v
+write_json /foss/designs/URECA/ureca_designs/out/fsm_netlist.json
+stat -liberty /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80.lib

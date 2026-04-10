@@ -1,0 +1,11 @@
+I would like you to implement a module named TopModule with the following
+interface. All input and output ports are one bit unless otherwise specified.
+ 
+- input clk
+- input reset
+- output out (4 bits)
+ 
+The module should implement a 4-bit up counter. On every positive edge of
+the clock, the counter increments by one. When reset is high, the counter
+resets to zero synchronously. The counter wraps around from 15 back to 0.
+Assume all sequential logic is triggered on the positive edge of the clock.

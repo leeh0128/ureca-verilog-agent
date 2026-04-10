@@ -1,0 +1,6 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "sh /foss/designs/URECA/ureca_designs/.claude/statusline-command.sh"
+  }
+}

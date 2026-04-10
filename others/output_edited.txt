@@ -1,0 +1,3152 @@
+[FLOW] Linting uart_top with Verilator...
+%Warning-EOFNEWLINE: rtl/fifo_top.v:101:10: Missing newline at end of file (POSIX 3.206).
+                                          : ... Suggest add newline.
+  101 | endmodule
+      |          ^
+                     ... For warning description see https://verilator.org/warn/EOFNEWLINE?v=5.040
+                     ... Use "/* verilator lint_off EOFNEWLINE */" and lint_on around source to disable this message.
+%Warning-EOFNEWLINE: rtl/uart_regs.v:240:10: Missing newline at end of file (POSIX 3.206).
+                                           : ... Suggest add newline.
+  240 | endmodule
+      |          ^
+%Warning-EOFNEWLINE: rtl/uart_rx_top.v:163:10: Missing newline at end of file (POSIX 3.206).
+                                             : ... Suggest add newline.
+  163 | endmodule
+      |          ^
+%Warning-EOFNEWLINE: rtl/uart_top.v:121:10: Missing newline at end of file (POSIX 3.206).
+                                          : ... Suggest add newline.
+  121 | endmodule
+      |          ^
+%Warning-EOFNEWLINE: rtl/uart_tx_top.v:166:10: Missing newline at end of file (POSIX 3.206).
+                                             : ... Suggest add newline.
+  166 | endmodule
+      |          ^
+%Warning-PINCONNECTEMPTY: rtl/uart_top.v:62:6: Instance pin connected by name with empty reference: 'full'
+   62 |     .full(),
+      |      ^~~~
+                          ... For warning description see https://verilator.org/warn/PINCONNECTEMPTY?v=5.040
+                          ... Use "/* verilator lint_off PINCONNECTEMPTY */" and lint_on around source to disable this message.
+%Warning-PINCONNECTEMPTY: rtl/uart_top.v:63:6: Instance pin connected by name with empty reference: 'overrun'
+   63 |     .overrun(),
+      |      ^~~~~~~
+%Warning-PINCONNECTEMPTY: rtl/uart_top.v:64:6: Instance pin connected by name with empty reference: 'underrun'
+   64 |     .underrun(),
+      |      ^~~~~~~~
+%Warning-PINCONNECTEMPTY: rtl/uart_top.v:66:6: Instance pin connected by name with empty reference: 'thresh_reached'
+   66 |     .thresh_reached()
+      |      ^~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: rtl/uart_top.v:79:6: Instance pin connected by name with empty reference: 'full'
+   79 |     .full(),
+      |      ^~~~
+%Warning-PINCONNECTEMPTY: rtl/uart_top.v:83:6: Instance pin connected by name with empty reference: 'thresh_reached'
+   83 |     .thresh_reached()
+      |      ^~~~~~~~~~~~~~
+%Warning-WIDTHEXPAND: rtl/fifo_top.v:99:26: Operator GTE expects 5 bits on the RHS, but RHS's VARREF 'thresh_level' generates 4 bits.
+                                          : ... note: In instance 'uart_top.rx_fifo_inst'
+   99 |       thresh_t <= (count >= thresh_level);
+      |                          ^~
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.040
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: rtl/uart_top.v:13:35: Signal is not used: 'tx_fifo_reset'
+                                           : ... note: In instance 'uart_top'
+   13 |   wire tx_fifo_push, tx_fifo_pop, tx_fifo_reset;
+      |                                   ^~~~~~~~~~~~~
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.040
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: rtl/uart_top.v:14:35: Signal is not used: 'rx_fifo_reset'
+                                           : ... note: In instance 'uart_top'
+   14 |   wire rx_fifo_push, rx_fifo_pop, rx_fifo_reset;
+      |                                   ^~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/uart_top.v:17:8: Signal is not used: 'tx_shift_reg_empty'
+                                          : ... note: In instance 'uart_top'
+   17 |   wire tx_shift_reg_empty, rx_fifo_overrun, rx_fifo_underrun;
+      |        ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/uart_top.v:17:45: Signal is not used: 'rx_fifo_underrun'
+                                           : ... note: In instance 'uart_top'
+   17 |   wire tx_shift_reg_empty, rx_fifo_overrun, rx_fifo_underrun;
+      |                                             ^~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/uart_top.v:20:14: Signal is not used: 'fcr_reg'
+                                           : ... note: In instance 'uart_top'
+   20 |   wire [7:0] fcr_reg, lcr_reg, lsr_reg, scr_reg, baud_div_lsb_reg, baud_div_msb_reg;
+      |              ^~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/uart_top.v:20:23: Bits of signal are not used: 'lcr_reg'[7]
+                                           : ... note: In instance 'uart_top'
+   20 |   wire [7:0] fcr_reg, lcr_reg, lsr_reg, scr_reg, baud_div_lsb_reg, baud_div_msb_reg;
+      |                       ^~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/uart_top.v:20:32: Signal is not used: 'lsr_reg'
+                                           : ... note: In instance 'uart_top'
+   20 |   wire [7:0] fcr_reg, lcr_reg, lsr_reg, scr_reg, baud_div_lsb_reg, baud_div_msb_reg;
+      |                                ^~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/uart_top.v:20:41: Signal is not used: 'scr_reg'
+                                           : ... note: In instance 'uart_top'
+   20 |   wire [7:0] fcr_reg, lcr_reg, lsr_reg, scr_reg, baud_div_lsb_reg, baud_div_msb_reg;
+      |                                         ^~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/uart_top.v:20:50: Signal is not used: 'baud_div_lsb_reg'
+                                           : ... note: In instance 'uart_top'
+   20 |   wire [7:0] fcr_reg, lcr_reg, lsr_reg, scr_reg, baud_div_lsb_reg, baud_div_msb_reg;
+      |                                                  ^~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/uart_top.v:20:68: Signal is not used: 'baud_div_msb_reg'
+                                           : ... note: In instance 'uart_top'
+   20 |   wire [7:0] fcr_reg, lcr_reg, lsr_reg, scr_reg, baud_div_lsb_reg, baud_div_msb_reg;
+      |                                                                    ^~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: rtl/fifo_top.v:18:20: Procedural assignment to declaration with initial value: 'wptr'
+                                          : ... note: In instance 'uart_top.rx_fifo_inst'
+                                          : ... Location of variable initialization
+   18 |   reg [3:0] wptr = 0;
+      |                    ^
+                      rtl/fifo_top.v:51:7: ... Location of variable process write
+                                         : ... Perhaps should initialize instead using a reset in this process
+   51 |       wptr <= 4'h0;
+      |       ^~~~
+                      ... For warning description see https://verilator.org/warn/PROCASSINIT?v=5.040
+                      ... Use "/* verilator lint_off PROCASSINIT */" and lint_on around source to disable this message.
+%Warning-PROCASSINIT: rtl/fifo_top.v:19:20: Procedural assignment to declaration with initial value: 'rptr'
+                                          : ... note: In instance 'uart_top.rx_fifo_inst'
+                                          : ... Location of variable initialization
+   19 |   reg [3:0] rptr = 0;
+      |                    ^
+                      rtl/fifo_top.v:64:7: ... Location of variable process write
+                                         : ... Perhaps should initialize instead using a reset in this process
+   64 |       rptr <= 4'h0;
+      |       ^~~~
+%Warning-PROCASSINIT: rtl/fifo_top.v:20:21: Procedural assignment to declaration with initial value: 'count'
+                                          : ... note: In instance 'uart_top.rx_fifo_inst'
+                                          : ... Location of variable initialization
+   20 |   reg [4:0] count = 0;
+      |                     ^
+                      rtl/fifo_top.v:39:7: ... Location of variable process write
+                                         : ... Perhaps should initialize instead using a reset in this process
+   39 |       count <= 0;
+      |       ^~~~~
+%Warning-PROCASSINIT: rtl/uart_regs.v:73:29: Procedural assignment to declaration with initial value: 'baud_counter'
+                                           : ... note: In instance 'uart_top.uart_regs_inst'
+                                           : ... Location of variable initialization
+   73 |   reg [15:0] baud_counter = 0;
+      |                             ^
+                      rtl/uart_regs.v:80:7: ... Location of variable process write
+                                          : ... Perhaps should initialize instead using a reset in this process
+   80 |       baud_counter <= 16'h0;
+      |       ^~~~~~~~~~~~
+%Warning-PROCASSINIT: rtl/uart_regs.v:74:20: Procedural assignment to declaration with initial value: 'baud_pulse'
+                                           : ... note: In instance 'uart_top.uart_regs_inst'
+                                           : ... Location of variable initialization
+   74 |   reg baud_pulse = 0;
+      |                    ^
+                      rtl/uart_regs.v:87:5: ... Location of variable process write
+                                          : ... Perhaps should initialize instead using a reset in this process
+   87 |     baud_pulse <= (|{baud_div_msb, baud_div_lsb}) & ~|baud_counter;
+      |     ^~~~~~~~~~
+%Warning-PROCASSINIT: rtl/uart_regs.v:132:39: Procedural assignment to declaration with initial value: 'rx_fifo_threshold_count'
+                                            : ... note: In instance 'uart_top.uart_regs_inst'
+                                            : ... Location of variable initialization
+  132 |   reg [3:0] rx_fifo_threshold_count = 0;
+      |                                       ^
+                      rtl/uart_regs.v:136:7: ... Location of variable process write
+                                           : ... Perhaps should initialize instead using a reset in this process
+  136 |       rx_fifo_threshold_count = 4'd0;
+      |       ^~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/uart_regs.v:179:13: Signal is not driven, nor used: 'lsr_reg_temp'
+                                             : ... note: In instance 'uart_top.uart_regs_inst'
+  179 |   reg [7:0] lsr_reg_temp;
+      |             ^~~~~~~~~~~~
+%Warning-PROCASSINIT: rtl/uart_rx_top.v:18:21: Procedural assignment to declaration with initial value: 'state'
+                                             : ... note: In instance 'uart_top.uart_rx_inst'
+                                             : ... Location of variable initialization
+   18 |   reg [2:0] state = 3'b000;
+      |                     ^~~~~~
+                      rtl/uart_rx_top.v:36:7: ... Location of variable process write
+                                            : ... Perhaps should initialize instead using a reset in this process
+   36 |       state <= 3'b000;
+      |       ^~~~~
+%Warning-PROCASSINIT: rtl/uart_rx_top.v:20:17: Procedural assignment to declaration with initial value: 'rx_sync'
+                                             : ... note: In instance 'uart_top.uart_rx_inst'
+                                             : ... Location of variable initialization
+   20 |   reg rx_sync = 1'b1;
+      |                 ^~~~
+                      rtl/uart_rx_top.v:24:5: ... Location of variable process write
+                                            : ... Perhaps should initialize instead using a reset in this process
+   24 |     rx_sync <= rx;
+      |     ^~~~~~~
+%Warning-PROCASSINIT: rtl/uart_rx_top.v:29:28: Procedural assignment to declaration with initial value: 'baud_counter'
+                                             : ... note: In instance 'uart_top.uart_rx_inst'
+                                             : ... Location of variable initialization
+   29 |   reg [4:0] baud_counter = 0;
+      |                            ^
+                      rtl/uart_rx_top.v:55:15: ... Location of variable process write
+                                             : ... Perhaps should initialize instead using a reset in this process
+   55 |               baud_counter <= 5'd15;
+      |               ^~~~~~~~~~~~
+%Warning-PROCASSINIT: rtl/uart_tx_top.v:20:27: Procedural assignment to declaration with initial value: 'bit_counter'
+                                             : ... note: In instance 'uart_top.uart_tx_inst'
+                                             : ... Location of variable initialization
+   20 |   reg [2:0] bit_counter = 0;  
+      |                           ^
+                      rtl/uart_tx_top.v:33:7: ... Location of variable process write
+                                            : ... Perhaps should initialize instead using a reset in this process
+   33 |       bit_counter <= 0;
+      |       ^~~~~~~~~~~
+%Warning-PROCASSINIT: rtl/uart_tx_top.v:21:28: Procedural assignment to declaration with initial value: 'baud_counter'
+                                             : ... note: In instance 'uart_top.uart_tx_inst'
+                                             : ... Location of variable initialization
+   21 |   reg [4:0] baud_counter = 5'd15;
+      |                            ^~~~~
+                      rtl/uart_tx_top.v:32:7: ... Location of variable process write
+                                            : ... Perhaps should initialize instead using a reset in this process
+   32 |       baud_counter <= 5'd15;
+      |       ^~~~~~~~~~~~
+%Warning-PROCASSINIT: rtl/uart_tx_top.v:26:21: Procedural assignment to declaration with initial value: 'state'
+                                             : ... note: In instance 'uart_top.uart_tx_inst'
+                                             : ... Location of variable initialization
+   26 |   reg [1:0] state = 2'b00;
+      |                     ^~~~~
+                      rtl/uart_tx_top.v:31:7: ... Location of variable process write
+                                            : ... Perhaps should initialize instead using a reset in this process
+   31 |       state <= 2'b00;
+      |       ^~~~~
+%Warning-CASEINCOMPLETE: rtl/uart_rx_top.v:49:9: Case values incompletely covered (example pattern 0x5)
+   49 |         case (state)
+      |         ^~~~
+                         ... For warning description see https://verilator.org/warn/CASEINCOMPLETE?v=5.040
+                         ... Use "/* verilator lint_off CASEINCOMPLETE */" and lint_on around source to disable this message.
+- V e r i l a t i o n   R e p o r t: Verilator 5.040 2025-08-30 rev v5.040
+- Verilator: Built from 0.126 MB sources in 6 modules, into 0.057 MB in 5 C++ files needing 0.000 MB
+- Verilator: Walltime 0.018 s (elab=0.002, cvt=0.010, bld=0.000); cpu 0.018 s on 1 threads; alloced 31.625 MB
+[LINT] PASSED
+[FLOW] Simulating uart_top...
+iverilog -g2012 -o /foss/designs/URECA/ureca_designs/out/sim.vvp -f /foss/designs/URECA/ureca_designs/out/rtl.f tb/uart_top_tb.v
+vvp /foss/designs/URECA/ureca_designs/out/sim.vvp | tee /foss/designs/URECA/ureca_designs/out/sim.log
+VCD info: dumpfile waves.vcd opened for output.
+PASS: Loopback successful. 0xF4 transmitted and received.
+tb/uart_top_tb.v:96: $finish called at 5280000 (1ns)
+[SIM] PASSED
+[FLOW] Synthesizing uart_top...
+
+-- Executing script file `/foss/designs/URECA/ureca_designs/out/synth.ys' --
+
+1. Executing Verilog-2005 frontend: rtl/fifo_top.v
+Parsing SystemVerilog input from `rtl/fifo_top.v' to AST representation.
+Generating RTLIL representation for module `\fifo_top'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: rtl/uart_regs.v
+Parsing SystemVerilog input from `rtl/uart_regs.v' to AST representation.
+Generating RTLIL representation for module `\uart_regs'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: rtl/uart_rx_top.v
+Parsing SystemVerilog input from `rtl/uart_rx_top.v' to AST representation.
+Generating RTLIL representation for module `\uart_rx_top'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: rtl/uart_top.v
+Parsing SystemVerilog input from `rtl/uart_top.v' to AST representation.
+Generating RTLIL representation for module `\uart_top'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: rtl/uart_tx_top.v
+Parsing SystemVerilog input from `rtl/uart_tx_top.v' to AST representation.
+Generating RTLIL representation for module `\uart_tx_top'.
+Successfully finished Verilog frontend.
+
+6. Executing HIERARCHY pass (managing design hierarchy).
+
+6.1. Analyzing design hierarchy..
+Top module:  \uart_top
+Used module:     \uart_rx_top
+Used module:     \uart_tx_top
+Used module:     \fifo_top
+Used module:     \uart_regs
+
+6.2. Analyzing design hierarchy..
+Top module:  \uart_top
+Used module:     \uart_rx_top
+Used module:     \uart_tx_top
+Used module:     \fifo_top
+Used module:     \uart_regs
+Removed 0 unused modules.
+
+7. Executing SYNTH pass.
+
+7.1. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1.1. Analyzing design hierarchy..
+Top module:  \uart_top
+Used module:     \uart_rx_top
+Used module:     \uart_tx_top
+Used module:     \fifo_top
+Used module:     \uart_regs
+
+7.1.2. Analyzing design hierarchy..
+Top module:  \uart_top
+Used module:     \uart_rx_top
+Used module:     \uart_tx_top
+Used module:     \fifo_top
+Used module:     \uart_regs
+Removed 0 unused modules.
+
+7.2. Executing PROC pass (convert processes to netlists).
+
+7.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$rtl/uart_tx_top.v:158$168 in module uart_tx_top.
+Marked 11 switch rules as full_case in process $proc$rtl/uart_tx_top.v:27$138 in module uart_tx_top.
+Marked 11 switch rules as full_case in process $proc$rtl/uart_rx_top.v:32$113 in module uart_rx_top.
+Marked 1 switch rules as full_case in process $proc$rtl/uart_regs.v:222$106 in module uart_regs.
+Marked 1 switch rules as full_case in process $proc$rtl/uart_regs.v:209$98 in module uart_regs.
+Marked 1 switch rules as full_case in process $proc$rtl/uart_regs.v:180$92 in module uart_regs.
+Marked 1 switch rules as full_case in process $proc$rtl/uart_regs.v:150$84 in module uart_regs.
+Removed 1 dead cases from process $proc$rtl/uart_regs.v:133$82 in module uart_regs.
+Marked 2 switch rules as full_case in process $proc$rtl/uart_regs.v:133$82 in module uart_regs.
+Marked 2 switch rules as full_case in process $proc$rtl/uart_regs.v:105$78 in module uart_regs.
+Marked 2 switch rules as full_case in process $proc$rtl/uart_regs.v:78$60 in module uart_regs.
+Marked 1 switch rules as full_case in process $proc$rtl/fifo_top.v:94$37 in module fifo_top.
+Marked 1 switch rules as full_case in process $proc$rtl/fifo_top.v:80$32 in module fifo_top.
+Marked 1 switch rules as full_case in process $proc$rtl/fifo_top.v:73$25 in module fifo_top.
+Marked 1 switch rules as full_case in process $proc$rtl/fifo_top.v:60$22 in module fifo_top.
+Marked 1 switch rules as full_case in process $proc$rtl/fifo_top.v:47$19 in module fifo_top.
+Marked 2 switch rules as full_case in process $proc$rtl/fifo_top.v:36$12 in module fifo_top.
+Removed a total of 1 dead cases.
+
+7.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 14 redundant assignments.
+Promoted 19 assignments to connections.
+
+7.2.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\uart_tx_top.$proc$rtl/uart_tx_top.v:26$173'.
+  Set init value: \state = 2'00
+Found init rule in `\uart_tx_top.$proc$rtl/uart_tx_top.v:21$172'.
+  Set init value: \baud_counter = 5'01111
+Found init rule in `\uart_tx_top.$proc$rtl/uart_tx_top.v:20$171'.
+  Set init value: \bit_counter = 3'000
+Found init rule in `\uart_rx_top.$proc$rtl/uart_rx_top.v:29$137'.
+  Set init value: \baud_counter = 5'00000
+Found init rule in `\uart_rx_top.$proc$rtl/uart_rx_top.v:20$136'.
+  Set init value: \rx_sync = 1'1
+Found init rule in `\uart_rx_top.$proc$rtl/uart_rx_top.v:18$135'.
+  Set init value: \state = 3'000
+Found init rule in `\uart_regs.$proc$rtl/uart_regs.v:132$111'.
+  Set init value: \rx_fifo_threshold_count = 4'0000
+Found init rule in `\uart_regs.$proc$rtl/uart_regs.v:74$110'.
+  Set init value: \baud_pulse = 1'0
+Found init rule in `\uart_regs.$proc$rtl/uart_regs.v:73$109'.
+  Set init value: \baud_counter = 16'0000000000000000
+Found init rule in `\fifo_top.$proc$rtl/fifo_top.v:20$42'.
+  Set init value: \count = 5'00000
+Found init rule in `\fifo_top.$proc$rtl/fifo_top.v:19$41'.
+  Set init value: \rptr = 4'0000
+Found init rule in `\fifo_top.$proc$rtl/fifo_top.v:18$40'.
+  Set init value: \wptr = 4'0000
+
+7.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst in `\uart_tx_top.$proc$rtl/uart_tx_top.v:158$168'.
+Found async reset \rst in `\uart_tx_top.$proc$rtl/uart_tx_top.v:27$138'.
+Found async reset \rst in `\uart_rx_top.$proc$rtl/uart_rx_top.v:32$113'.
+Found async reset \rst in `\uart_regs.$proc$rtl/uart_regs.v:209$98'.
+Found async reset \rst in `\uart_regs.$proc$rtl/uart_regs.v:180$92'.
+Found async reset \rst in `\uart_regs.$proc$rtl/uart_regs.v:150$84'.
+Found async reset \rst in `\uart_regs.$proc$rtl/uart_regs.v:105$78'.
+Found async reset \rst in `\uart_regs.$proc$rtl/uart_regs.v:78$60'.
+Found async reset \rst in `\fifo_top.$proc$rtl/fifo_top.v:94$37'.
+Found async reset \rst in `\fifo_top.$proc$rtl/fifo_top.v:80$32'.
+Found async reset \rst in `\fifo_top.$proc$rtl/fifo_top.v:60$22'.
+Found async reset \rst in `\fifo_top.$proc$rtl/fifo_top.v:47$19'.
+Found async reset \rst in `\fifo_top.$proc$rtl/fifo_top.v:36$12'.
+
+7.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~47 debug messages>
+
+7.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\uart_tx_top.$proc$rtl/uart_tx_top.v:26$173'.
+Creating decoders for process `\uart_tx_top.$proc$rtl/uart_tx_top.v:21$172'.
+Creating decoders for process `\uart_tx_top.$proc$rtl/uart_tx_top.v:20$171'.
+Creating decoders for process `\uart_tx_top.$proc$rtl/uart_tx_top.v:158$168'.
+     1/1: $0\tx[0:0]
+Creating decoders for process `\uart_tx_top.$proc$rtl/uart_tx_top.v:27$138'.
+     1/10: $0\data_in_reg[7:0]
+     2/10: $0\data_parity[0:0]
+     3/10: $0\tx_bit[0:0]
+     4/10: $0\shift_reg[7:0]
+     5/10: $0\shift_reg_empty[0:0]
+     6/10: $0\parity_bit[0:0]
+     7/10: $0\bit_counter[2:0]
+     8/10: $0\state[1:0]
+     9/10: $0\baud_counter[4:0]
+    10/10: $0\pop[0:0]
+Creating decoders for process `\uart_rx_top.$proc$rtl/uart_rx_top.v:29$137'.
+Creating decoders for process `\uart_rx_top.$proc$rtl/uart_rx_top.v:20$136'.
+Creating decoders for process `\uart_rx_top.$proc$rtl/uart_rx_top.v:18$135'.
+Creating decoders for process `\uart_rx_top.$proc$rtl/uart_rx_top.v:32$113'.
+     1/9: $0\push[0:0]
+     2/9: $0\parity_bit[0:0]
+     3/9: $0\bit_counter[2:0]
+     4/9: $0\state[2:0]
+     5/9: $0\break_interrupt[0:0]
+     6/9: $0\framing_error[0:0]
+     7/9: $0\parity_error[0:0]
+     8/9: $0\baud_counter[4:0]
+     9/9: $0\data_out[7:0]
+Creating decoders for process `\uart_rx_top.$proc$rtl/uart_rx_top.v:23$112'.
+Creating decoders for process `\uart_regs.$proc$rtl/uart_regs.v:132$111'.
+Creating decoders for process `\uart_regs.$proc$rtl/uart_regs.v:74$110'.
+Creating decoders for process `\uart_regs.$proc$rtl/uart_regs.v:73$109'.
+Creating decoders for process `\uart_regs.$proc$rtl/uart_regs.v:222$106'.
+     1/1: $0\data_out[7:0]
+Creating decoders for process `\uart_regs.$proc$rtl/uart_regs.v:218$105'.
+     1/1: $0\scratch_reg_temp[7:0]
+Creating decoders for process `\uart_regs.$proc$rtl/uart_regs.v:209$98'.
+     1/1: $0\scratch_reg[7:0]
+Creating decoders for process `\uart_regs.$proc$rtl/uart_regs.v:204$97'.
+     1/1: $0\lsr_temp[7:0]
+Creating decoders for process `\uart_regs.$proc$rtl/uart_regs.v:180$92'.
+     1/8: $0\lsr_break_interrupt[0:0]
+     2/8: $0\lsr_framing_error[0:0]
+     3/8: $0\lsr_parity_error[0:0]
+     4/8: $0\lsr_overrun_error[0:0]
+     5/8: $0\lsr_data_ready[0:0]
+     6/8: $0\lsr_transmitter_holding_empty[0:0]
+     7/8: $0\lsr_transmitter_empty[0:0]
+     8/8: $0\lsr_rx_fifo_error[0:0]
+Creating decoders for process `\uart_regs.$proc$rtl/uart_regs.v:174$91'.
+     1/1: $0\lcr_reg_temp[7:0]
+Creating decoders for process `\uart_regs.$proc$rtl/uart_regs.v:150$84'.
+     1/7: $0\lcr_word_length_select[1:0]
+     2/7: $0\lcr_stop_bits[0:0]
+     3/7: $0\lcr_parity_enable[0:0]
+     4/7: $0\lcr_even_parity_select[0:0]
+     5/7: $0\lcr_stick_parity[0:0]
+     6/7: $0\lcr_break_control[0:0]
+     7/7: $0\lcr_divisor_latch_access[0:0]
+Creating decoders for process `\uart_regs.$proc$rtl/uart_regs.v:133$82'.
+     1/2: $2\rx_fifo_threshold_count[3:0]
+     2/2: $1\rx_fifo_threshold_count[3:0]
+Creating decoders for process `\uart_regs.$proc$rtl/uart_regs.v:105$78'.
+     1/6: $0\fcr_rx_reset[0:0]
+     2/6: $0\fcr_tx_reset[0:0]
+     3/6: $0\fcr_fifo_enable[0:0]
+     4/6: $0\fcr_dma_enable[0:0]
+     5/6: $0\fcr_reserved_bits[1:0]
+     6/6: $0\fcr_rx_trigger_level[1:0]
+Creating decoders for process `\uart_regs.$proc$rtl/uart_regs.v:101$77'.
+     1/1: $0\rx_data[7:0]
+Creating decoders for process `\uart_regs.$proc$rtl/uart_regs.v:86$64'.
+Creating decoders for process `\uart_regs.$proc$rtl/uart_regs.v:78$60'.
+     1/1: $0\baud_counter[15:0]
+Creating decoders for process `\uart_regs.$proc$rtl/uart_regs.v:75$53'.
+Creating decoders for process `\uart_regs.$proc$rtl/uart_regs.v:68$48'.
+     1/1: $0\baud_div_msb[7:0]
+Creating decoders for process `\uart_regs.$proc$rtl/uart_regs.v:64$43'.
+     1/1: $0\baud_div_lsb[7:0]
+Creating decoders for process `\fifo_top.$proc$rtl/fifo_top.v:20$42'.
+Creating decoders for process `\fifo_top.$proc$rtl/fifo_top.v:19$41'.
+Creating decoders for process `\fifo_top.$proc$rtl/fifo_top.v:18$40'.
+Creating decoders for process `\fifo_top.$proc$rtl/fifo_top.v:94$37'.
+     1/1: $0\thresh_t[0:0]
+Creating decoders for process `\fifo_top.$proc$rtl/fifo_top.v:80$32'.
+     1/2: $0\underrun_t[0:0]
+     2/2: $0\overrun_t[0:0]
+Creating decoders for process `\fifo_top.$proc$rtl/fifo_top.v:73$25'.
+     1/3: $1$memwr$\mem$rtl/fifo_top.v:76$1_EN[7:0]$31
+     2/3: $1$memwr$\mem$rtl/fifo_top.v:76$1_DATA[7:0]$30
+     3/3: $1$memwr$\mem$rtl/fifo_top.v:76$1_ADDR[3:0]$29
+Creating decoders for process `\fifo_top.$proc$rtl/fifo_top.v:60$22'.
+     1/1: $0\rptr[3:0]
+Creating decoders for process `\fifo_top.$proc$rtl/fifo_top.v:47$19'.
+     1/1: $0\wptr[3:0]
+Creating decoders for process `\fifo_top.$proc$rtl/fifo_top.v:36$12'.
+     1/1: $0\count[4:0]
+
+7.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\uart_regs.\rx_fifo_threshold_count' from process `\uart_regs.$proc$rtl/uart_regs.v:133$82'.
+Removing init bit 1'0 for non-memory siginal `\uart_regs.\rx_fifo_threshold_count [0]` in process `\uart_regs.$proc$rtl/uart_regs.v:133$82`.
+Removing init bit 1'0 for non-memory siginal `\uart_regs.\rx_fifo_threshold_count [1]` in process `\uart_regs.$proc$rtl/uart_regs.v:133$82`.
+Removing init bit 1'0 for non-memory siginal `\uart_regs.\rx_fifo_threshold_count [2]` in process `\uart_regs.$proc$rtl/uart_regs.v:133$82`.
+Removing init bit 1'0 for non-memory siginal `\uart_regs.\rx_fifo_threshold_count [3]` in process `\uart_regs.$proc$rtl/uart_regs.v:133$82`.
+
+7.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\uart_tx_top.\tx' using process `\uart_tx_top.$proc$rtl/uart_tx_top.v:158$168'.
+  created $adff cell `$procdff$607' with positive edge clock and positive level reset.
+Creating register for signal `\uart_tx_top.\pop' using process `\uart_tx_top.$proc$rtl/uart_tx_top.v:27$138'.
+  created $adff cell `$procdff$610' with positive edge clock and positive level reset.
+Creating register for signal `\uart_tx_top.\baud_counter' using process `\uart_tx_top.$proc$rtl/uart_tx_top.v:27$138'.
+  created $adff cell `$procdff$613' with positive edge clock and positive level reset.
+Creating register for signal `\uart_tx_top.\state' using process `\uart_tx_top.$proc$rtl/uart_tx_top.v:27$138'.
+  created $adff cell `$procdff$616' with positive edge clock and positive level reset.
+Creating register for signal `\uart_tx_top.\bit_counter' using process `\uart_tx_top.$proc$rtl/uart_tx_top.v:27$138'.
+  created $adff cell `$procdff$619' with positive edge clock and positive level reset.
+Creating register for signal `\uart_tx_top.\parity_bit' using process `\uart_tx_top.$proc$rtl/uart_tx_top.v:27$138'.
+  created $dff cell `$procdff$624' with positive edge clock.
+Creating register for signal `\uart_tx_top.\shift_reg_empty' using process `\uart_tx_top.$proc$rtl/uart_tx_top.v:27$138'.
+  created $adff cell `$procdff$627' with positive edge clock and positive level reset.
+Creating register for signal `\uart_tx_top.\shift_reg' using process `\uart_tx_top.$proc$rtl/uart_tx_top.v:27$138'.
+  created $adff cell `$procdff$630' with positive edge clock and positive level reset.
+Creating register for signal `\uart_tx_top.\tx_bit' using process `\uart_tx_top.$proc$rtl/uart_tx_top.v:27$138'.
+  created $adff cell `$procdff$633' with positive edge clock and positive level reset.
+Creating register for signal `\uart_tx_top.\data_parity' using process `\uart_tx_top.$proc$rtl/uart_tx_top.v:27$138'.
+  created $dff cell `$procdff$638' with positive edge clock.
+Creating register for signal `\uart_tx_top.\data_in_reg' using process `\uart_tx_top.$proc$rtl/uart_tx_top.v:27$138'.
+  created $dff cell `$procdff$643' with positive edge clock.
+Creating register for signal `\uart_rx_top.\data_out' using process `\uart_rx_top.$proc$rtl/uart_rx_top.v:32$113'.
+  created $dff cell `$procdff$648' with positive edge clock.
+Creating register for signal `\uart_rx_top.\push' using process `\uart_rx_top.$proc$rtl/uart_rx_top.v:32$113'.
+  created $adff cell `$procdff$651' with positive edge clock and positive level reset.
+Creating register for signal `\uart_rx_top.\baud_counter' using process `\uart_rx_top.$proc$rtl/uart_rx_top.v:32$113'.
+  created $dff cell `$procdff$656' with positive edge clock.
+Creating register for signal `\uart_rx_top.\parity_error' using process `\uart_rx_top.$proc$rtl/uart_rx_top.v:32$113'.
+  created $adff cell `$procdff$659' with positive edge clock and positive level reset.
+Creating register for signal `\uart_rx_top.\framing_error' using process `\uart_rx_top.$proc$rtl/uart_rx_top.v:32$113'.
+  created $adff cell `$procdff$662' with positive edge clock and positive level reset.
+Creating register for signal `\uart_rx_top.\break_interrupt' using process `\uart_rx_top.$proc$rtl/uart_rx_top.v:32$113'.
+  created $adff cell `$procdff$665' with positive edge clock and positive level reset.
+Creating register for signal `\uart_rx_top.\state' using process `\uart_rx_top.$proc$rtl/uart_rx_top.v:32$113'.
+  created $adff cell `$procdff$668' with positive edge clock and positive level reset.
+Creating register for signal `\uart_rx_top.\bit_counter' using process `\uart_rx_top.$proc$rtl/uart_rx_top.v:32$113'.
+  created $adff cell `$procdff$671' with positive edge clock and positive level reset.
+Creating register for signal `\uart_rx_top.\parity_bit' using process `\uart_rx_top.$proc$rtl/uart_rx_top.v:32$113'.
+  created $dff cell `$procdff$676' with positive edge clock.
+Creating register for signal `\uart_rx_top.\rx_sync' using process `\uart_rx_top.$proc$rtl/uart_rx_top.v:23$112'.
+  created $dff cell `$procdff$677' with positive edge clock.
+Creating register for signal `\uart_regs.\data_out' using process `\uart_regs.$proc$rtl/uart_regs.v:222$106'.
+  created $dff cell `$procdff$678' with positive edge clock.
+Creating register for signal `\uart_regs.\scratch_reg_temp' using process `\uart_regs.$proc$rtl/uart_regs.v:218$105'.
+  created $dff cell `$procdff$679' with positive edge clock.
+Creating register for signal `\uart_regs.\scratch_reg' using process `\uart_regs.$proc$rtl/uart_regs.v:209$98'.
+  created $adff cell `$procdff$682' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\lsr_temp' using process `\uart_regs.$proc$rtl/uart_regs.v:204$97'.
+  created $dff cell `$procdff$683' with positive edge clock.
+Creating register for signal `\uart_regs.\lsr_rx_fifo_error' using process `\uart_regs.$proc$rtl/uart_regs.v:180$92'.
+  created $adff cell `$procdff$686' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\lsr_transmitter_empty' using process `\uart_regs.$proc$rtl/uart_regs.v:180$92'.
+  created $adff cell `$procdff$689' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\lsr_transmitter_holding_empty' using process `\uart_regs.$proc$rtl/uart_regs.v:180$92'.
+  created $adff cell `$procdff$692' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\lsr_break_interrupt' using process `\uart_regs.$proc$rtl/uart_regs.v:180$92'.
+  created $adff cell `$procdff$695' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\lsr_framing_error' using process `\uart_regs.$proc$rtl/uart_regs.v:180$92'.
+  created $adff cell `$procdff$698' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\lsr_parity_error' using process `\uart_regs.$proc$rtl/uart_regs.v:180$92'.
+  created $adff cell `$procdff$701' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\lsr_overrun_error' using process `\uart_regs.$proc$rtl/uart_regs.v:180$92'.
+  created $adff cell `$procdff$704' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\lsr_data_ready' using process `\uart_regs.$proc$rtl/uart_regs.v:180$92'.
+  created $adff cell `$procdff$707' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\lcr_reg_temp' using process `\uart_regs.$proc$rtl/uart_regs.v:174$91'.
+  created $dff cell `$procdff$708' with positive edge clock.
+Creating register for signal `\uart_regs.\lcr_divisor_latch_access' using process `\uart_regs.$proc$rtl/uart_regs.v:150$84'.
+  created $adff cell `$procdff$711' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\lcr_break_control' using process `\uart_regs.$proc$rtl/uart_regs.v:150$84'.
+  created $adff cell `$procdff$714' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\lcr_stick_parity' using process `\uart_regs.$proc$rtl/uart_regs.v:150$84'.
+  created $adff cell `$procdff$717' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\lcr_even_parity_select' using process `\uart_regs.$proc$rtl/uart_regs.v:150$84'.
+  created $adff cell `$procdff$720' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\lcr_parity_enable' using process `\uart_regs.$proc$rtl/uart_regs.v:150$84'.
+  created $adff cell `$procdff$723' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\lcr_stop_bits' using process `\uart_regs.$proc$rtl/uart_regs.v:150$84'.
+  created $adff cell `$procdff$726' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\lcr_word_length_select' using process `\uart_regs.$proc$rtl/uart_regs.v:150$84'.
+  created $adff cell `$procdff$729' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\fcr_rx_trigger_level' using process `\uart_regs.$proc$rtl/uart_regs.v:105$78'.
+  created $adff cell `$procdff$732' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\fcr_reserved_bits' using process `\uart_regs.$proc$rtl/uart_regs.v:105$78'.
+  created $adff cell `$procdff$735' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\fcr_dma_enable' using process `\uart_regs.$proc$rtl/uart_regs.v:105$78'.
+  created $adff cell `$procdff$738' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\fcr_tx_reset' using process `\uart_regs.$proc$rtl/uart_regs.v:105$78'.
+  created $adff cell `$procdff$741' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\fcr_rx_reset' using process `\uart_regs.$proc$rtl/uart_regs.v:105$78'.
+  created $adff cell `$procdff$744' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\fcr_fifo_enable' using process `\uart_regs.$proc$rtl/uart_regs.v:105$78'.
+  created $adff cell `$procdff$747' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\rx_data' using process `\uart_regs.$proc$rtl/uart_regs.v:101$77'.
+  created $dff cell `$procdff$748' with positive edge clock.
+Creating register for signal `\uart_regs.\baud_pulse' using process `\uart_regs.$proc$rtl/uart_regs.v:86$64'.
+  created $dff cell `$procdff$749' with positive edge clock.
+Creating register for signal `\uart_regs.\baud_counter' using process `\uart_regs.$proc$rtl/uart_regs.v:78$60'.
+  created $adff cell `$procdff$752' with positive edge clock and positive level reset.
+Creating register for signal `\uart_regs.\baud_update' using process `\uart_regs.$proc$rtl/uart_regs.v:75$53'.
+  created $dff cell `$procdff$753' with positive edge clock.
+Creating register for signal `\uart_regs.\baud_div_msb' using process `\uart_regs.$proc$rtl/uart_regs.v:68$48'.
+  created $dff cell `$procdff$754' with positive edge clock.
+Creating register for signal `\uart_regs.\baud_div_lsb' using process `\uart_regs.$proc$rtl/uart_regs.v:64$43'.
+  created $dff cell `$procdff$755' with positive edge clock.
+Creating register for signal `\fifo_top.\thresh_t' using process `\fifo_top.$proc$rtl/fifo_top.v:94$37'.
+  created $adff cell `$procdff$758' with positive edge clock and positive level reset.
+Creating register for signal `\fifo_top.\overrun_t' using process `\fifo_top.$proc$rtl/fifo_top.v:80$32'.
+  created $adff cell `$procdff$761' with positive edge clock and positive level reset.
+Creating register for signal `\fifo_top.\underrun_t' using process `\fifo_top.$proc$rtl/fifo_top.v:80$32'.
+  created $adff cell `$procdff$764' with positive edge clock and positive level reset.
+Creating register for signal `\fifo_top.$memwr$\mem$rtl/fifo_top.v:76$1_ADDR' using process `\fifo_top.$proc$rtl/fifo_top.v:73$25'.
+  created $dff cell `$procdff$765' with positive edge clock.
+Creating register for signal `\fifo_top.$memwr$\mem$rtl/fifo_top.v:76$1_DATA' using process `\fifo_top.$proc$rtl/fifo_top.v:73$25'.
+  created $dff cell `$procdff$766' with positive edge clock.
+Creating register for signal `\fifo_top.$memwr$\mem$rtl/fifo_top.v:76$1_EN' using process `\fifo_top.$proc$rtl/fifo_top.v:73$25'.
+  created $dff cell `$procdff$767' with positive edge clock.
+Creating register for signal `\fifo_top.\rptr' using process `\fifo_top.$proc$rtl/fifo_top.v:60$22'.
+  created $adff cell `$procdff$770' with positive edge clock and positive level reset.
+Creating register for signal `\fifo_top.\wptr' using process `\fifo_top.$proc$rtl/fifo_top.v:47$19'.
+  created $adff cell `$procdff$773' with positive edge clock and positive level reset.
+Creating register for signal `\fifo_top.\count' using process `\fifo_top.$proc$rtl/fifo_top.v:36$12'.
+  created $adff cell `$procdff$776' with positive edge clock and positive level reset.
+
+7.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+7.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `uart_tx_top.$proc$rtl/uart_tx_top.v:26$173'.
+Removing empty process `uart_tx_top.$proc$rtl/uart_tx_top.v:21$172'.
+Removing empty process `uart_tx_top.$proc$rtl/uart_tx_top.v:20$171'.
+Removing empty process `uart_tx_top.$proc$rtl/uart_tx_top.v:158$168'.
+Found and cleaned up 12 empty switches in `\uart_tx_top.$proc$rtl/uart_tx_top.v:27$138'.
+Removing empty process `uart_tx_top.$proc$rtl/uart_tx_top.v:27$138'.
+Removing empty process `uart_rx_top.$proc$rtl/uart_rx_top.v:29$137'.
+Removing empty process `uart_rx_top.$proc$rtl/uart_rx_top.v:20$136'.
+Removing empty process `uart_rx_top.$proc$rtl/uart_rx_top.v:18$135'.
+Found and cleaned up 16 empty switches in `\uart_rx_top.$proc$rtl/uart_rx_top.v:32$113'.
+Removing empty process `uart_rx_top.$proc$rtl/uart_rx_top.v:32$113'.
+Removing empty process `uart_rx_top.$proc$rtl/uart_rx_top.v:23$112'.
+Removing empty process `uart_regs.$proc$rtl/uart_regs.v:132$111'.
+Removing empty process `uart_regs.$proc$rtl/uart_regs.v:74$110'.
+Removing empty process `uart_regs.$proc$rtl/uart_regs.v:73$109'.
+Found and cleaned up 1 empty switch in `\uart_regs.$proc$rtl/uart_regs.v:222$106'.
+Removing empty process `uart_regs.$proc$rtl/uart_regs.v:222$106'.
+Found and cleaned up 1 empty switch in `\uart_regs.$proc$rtl/uart_regs.v:218$105'.
+Removing empty process `uart_regs.$proc$rtl/uart_regs.v:218$105'.
+Found and cleaned up 1 empty switch in `\uart_regs.$proc$rtl/uart_regs.v:209$98'.
+Removing empty process `uart_regs.$proc$rtl/uart_regs.v:209$98'.
+Found and cleaned up 1 empty switch in `\uart_regs.$proc$rtl/uart_regs.v:204$97'.
+Removing empty process `uart_regs.$proc$rtl/uart_regs.v:204$97'.
+Removing empty process `uart_regs.$proc$rtl/uart_regs.v:180$92'.
+Found and cleaned up 1 empty switch in `\uart_regs.$proc$rtl/uart_regs.v:174$91'.
+Removing empty process `uart_regs.$proc$rtl/uart_regs.v:174$91'.
+Found and cleaned up 1 empty switch in `\uart_regs.$proc$rtl/uart_regs.v:150$84'.
+Removing empty process `uart_regs.$proc$rtl/uart_regs.v:150$84'.
+Found and cleaned up 2 empty switches in `\uart_regs.$proc$rtl/uart_regs.v:133$82'.
+Removing empty process `uart_regs.$proc$rtl/uart_regs.v:133$82'.
+Found and cleaned up 1 empty switch in `\uart_regs.$proc$rtl/uart_regs.v:105$78'.
+Removing empty process `uart_regs.$proc$rtl/uart_regs.v:105$78'.
+Found and cleaned up 1 empty switch in `\uart_regs.$proc$rtl/uart_regs.v:101$77'.
+Removing empty process `uart_regs.$proc$rtl/uart_regs.v:101$77'.
+Removing empty process `uart_regs.$proc$rtl/uart_regs.v:86$64'.
+Found and cleaned up 1 empty switch in `\uart_regs.$proc$rtl/uart_regs.v:78$60'.
+Removing empty process `uart_regs.$proc$rtl/uart_regs.v:78$60'.
+Removing empty process `uart_regs.$proc$rtl/uart_regs.v:75$53'.
+Found and cleaned up 1 empty switch in `\uart_regs.$proc$rtl/uart_regs.v:68$48'.
+Removing empty process `uart_regs.$proc$rtl/uart_regs.v:68$48'.
+Found and cleaned up 1 empty switch in `\uart_regs.$proc$rtl/uart_regs.v:64$43'.
+Removing empty process `uart_regs.$proc$rtl/uart_regs.v:64$43'.
+Removing empty process `fifo_top.$proc$rtl/fifo_top.v:20$42'.
+Removing empty process `fifo_top.$proc$rtl/fifo_top.v:19$41'.
+Removing empty process `fifo_top.$proc$rtl/fifo_top.v:18$40'.
+Found and cleaned up 1 empty switch in `\fifo_top.$proc$rtl/fifo_top.v:94$37'.
+Removing empty process `fifo_top.$proc$rtl/fifo_top.v:94$37'.
+Removing empty process `fifo_top.$proc$rtl/fifo_top.v:80$32'.
+Found and cleaned up 1 empty switch in `\fifo_top.$proc$rtl/fifo_top.v:73$25'.
+Removing empty process `fifo_top.$proc$rtl/fifo_top.v:73$25'.
+Found and cleaned up 1 empty switch in `\fifo_top.$proc$rtl/fifo_top.v:60$22'.
+Removing empty process `fifo_top.$proc$rtl/fifo_top.v:60$22'.
+Found and cleaned up 1 empty switch in `\fifo_top.$proc$rtl/fifo_top.v:47$19'.
+Removing empty process `fifo_top.$proc$rtl/fifo_top.v:47$19'.
+Found and cleaned up 2 empty switches in `\fifo_top.$proc$rtl/fifo_top.v:36$12'.
+Removing empty process `fifo_top.$proc$rtl/fifo_top.v:36$12'.
+Cleaned up 47 empty switches.
+
+7.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_tx_top.
+<suppressed ~45 debug messages>
+Optimizing module uart_top.
+Optimizing module uart_rx_top.
+<suppressed ~22 debug messages>
+Optimizing module uart_regs.
+<suppressed ~44 debug messages>
+Optimizing module fifo_top.
+<suppressed ~9 debug messages>
+
+7.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_tx_top.
+Optimizing module uart_top.
+Optimizing module uart_rx_top.
+Optimizing module uart_regs.
+Optimizing module fifo_top.
+
+7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_tx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \fifo_top..
+Removed 8 unused cells and 288 unused wires.
+<suppressed ~13 debug messages>
+
+7.5. Executing CHECK pass (checking for obvious problems).
+Checking module fifo_top...
+Checking module uart_regs...
+Checking module uart_rx_top...
+Checking module uart_top...
+Checking module uart_tx_top...
+Found and reported 0 problems.
+
+7.6. Executing OPT pass (performing simple optimizations).
+
+7.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module uart_regs.
+Optimizing module uart_rx_top.
+Optimizing module uart_top.
+Optimizing module uart_tx_top.
+
+7.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `\uart_regs'.
+<suppressed ~39 debug messages>
+Finding identical cells in module `\uart_rx_top'.
+<suppressed ~66 debug messages>
+Finding identical cells in module `\uart_top'.
+Finding identical cells in module `\uart_tx_top'.
+<suppressed ~90 debug messages>
+Removed a total of 67 cells.
+
+7.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fifo_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_regs..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$556.
+Running muxtree optimizer on module \uart_rx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \uart_tx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 1 multiplexer ports.
+<suppressed ~208 debug messages>
+
+7.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fifo_top.
+    Consolidated identical input bits for $mux cell $procmux$588:
+      Old ports: A=8'00000000, B=8'11111111, Y=$0$memwr$\mem$rtl/fifo_top.v:76$1_EN[7:0]$28
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\mem$rtl/fifo_top.v:76$1_EN[7:0]$28 [0]
+      New connections: $0$memwr$\mem$rtl/fifo_top.v:76$1_EN[7:0]$28 [7:1] = { $0$memwr$\mem$rtl/fifo_top.v:76$1_EN[7:0]$28 [0] $0$memwr$\mem$rtl/fifo_top.v:76$1_EN[7:0]$28 [0] $0$memwr$\mem$rtl/fifo_top.v:76$1_EN[7:0]$28 [0] $0$memwr$\mem$rtl/fifo_top.v:76$1_EN[7:0]$28 [0] $0$memwr$\mem$rtl/fifo_top.v:76$1_EN[7:0]$28 [0] $0$memwr$\mem$rtl/fifo_top.v:76$1_EN[7:0]$28 [0] $0$memwr$\mem$rtl/fifo_top.v:76$1_EN[7:0]$28 [0] }
+  Optimizing cells in module \fifo_top.
+  Optimizing cells in module \uart_regs.
+    New ctrl vector for $pmux cell $procmux$519: { $eq$rtl/uart_regs.v:65$44_Y $eq$rtl/uart_regs.v:69$49_Y $eq$rtl/uart_regs.v:161$86_Y $eq$rtl/uart_regs.v:203$95_Y $auto$opt_reduce.cc:137:opt_pmux$779 $eq$rtl/uart_regs.v:212$100_Y }
+  Optimizing cells in module \uart_regs.
+  Optimizing cells in module \uart_rx_top.
+  Optimizing cells in module \uart_top.
+  Optimizing cells in module \uart_tx_top.
+Performed a total of 2 changes.
+
+7.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Finding identical cells in module `\uart_regs'.
+Finding identical cells in module `\uart_rx_top'.
+<suppressed ~15 debug messages>
+Finding identical cells in module `\uart_top'.
+Finding identical cells in module `\uart_tx_top'.
+<suppressed ~12 debug messages>
+Removed a total of 9 cells.
+
+7.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+Handling D = Q on $procdff$735 ($adff) from module uart_regs (removing D path).
+Handling D = Q on $procdff$692 ($adff) from module uart_regs (removing D path).
+Handling D = Q on $procdff$689 ($adff) from module uart_regs (removing D path).
+Handling D = Q on $procdff$686 ($adff) from module uart_regs (removing D path).
+Setting constant 0-bit at position 0 on $procdff$686 ($dlatch) from module uart_regs.
+Setting constant 1-bit at position 0 on $procdff$689 ($dlatch) from module uart_regs.
+Setting constant 1-bit at position 0 on $procdff$692 ($dlatch) from module uart_regs.
+Setting constant 0-bit at position 0 on $procdff$735 ($dlatch) from module uart_regs.
+Setting constant 0-bit at position 1 on $procdff$735 ($dlatch) from module uart_regs.
+Handling D = Q on $procdff$665 ($adff) from module uart_rx_top (removing D path).
+Setting constant 0-bit at position 0 on $procdff$665 ($dlatch) from module uart_rx_top.
+
+7.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+Removed 0 unused cells and 77 unused wires.
+<suppressed ~4 debug messages>
+
+7.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module uart_regs.
+Optimizing module uart_rx_top.
+Optimizing module uart_top.
+Optimizing module uart_tx_top.
+
+7.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fifo_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_regs..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_rx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \uart_tx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~215 debug messages>
+
+7.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fifo_top.
+  Optimizing cells in module \uart_regs.
+  Optimizing cells in module \uart_rx_top.
+    New ctrl vector for $pmux cell $procmux$472: { $procmux$449_CMP $procmux$409_CMP $auto$opt_reduce.cc:137:opt_pmux$781 }
+  Optimizing cells in module \uart_rx_top.
+  Optimizing cells in module \uart_top.
+  Optimizing cells in module \uart_tx_top.
+Performed a total of 1 changes.
+
+7.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Finding identical cells in module `\uart_regs'.
+Finding identical cells in module `\uart_rx_top'.
+Finding identical cells in module `\uart_top'.
+Finding identical cells in module `\uart_tx_top'.
+Removed a total of 0 cells.
+
+7.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+
+7.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module uart_regs.
+Optimizing module uart_rx_top.
+Optimizing module uart_top.
+Optimizing module uart_tx_top.
+
+7.6.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.6.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fifo_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_regs..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_rx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \uart_tx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~211 debug messages>
+
+7.6.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fifo_top.
+  Optimizing cells in module \uart_regs.
+  Optimizing cells in module \uart_rx_top.
+  Optimizing cells in module \uart_top.
+  Optimizing cells in module \uart_tx_top.
+Performed a total of 0 changes.
+
+7.6.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Finding identical cells in module `\uart_regs'.
+Finding identical cells in module `\uart_rx_top'.
+Finding identical cells in module `\uart_top'.
+Finding identical cells in module `\uart_tx_top'.
+Removed a total of 0 cells.
+
+7.6.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.6.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+
+7.6.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module uart_regs.
+Optimizing module uart_rx_top.
+Optimizing module uart_top.
+Optimizing module uart_tx_top.
+
+7.6.23. Finished OPT passes. (There is nothing left to do.)
+
+7.7. Executing FSM pass (extract and optimize FSM).
+
+7.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking uart_rx_top.state as FSM state register:
+    Register has an initialization value.
+Not marking uart_tx_top.state as FSM state register:
+    Register has an initialization value.
+
+7.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+7.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+7.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+
+7.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+7.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+7.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+7.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+7.8. Executing OPT pass (performing simple optimizations).
+
+7.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module uart_regs.
+Optimizing module uart_rx_top.
+Optimizing module uart_top.
+Optimizing module uart_tx_top.
+
+7.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Finding identical cells in module `\uart_regs'.
+Finding identical cells in module `\uart_rx_top'.
+Finding identical cells in module `\uart_top'.
+Finding identical cells in module `\uart_tx_top'.
+Removed a total of 0 cells.
+
+7.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fifo_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_regs..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_rx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \uart_tx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~211 debug messages>
+
+7.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fifo_top.
+  Optimizing cells in module \uart_regs.
+  Optimizing cells in module \uart_rx_top.
+  Optimizing cells in module \uart_top.
+  Optimizing cells in module \uart_tx_top.
+Performed a total of 0 changes.
+
+7.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Finding identical cells in module `\uart_regs'.
+Finding identical cells in module `\uart_rx_top'.
+Finding identical cells in module `\uart_top'.
+Finding identical cells in module `\uart_tx_top'.
+Removed a total of 0 cells.
+
+7.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$776 ($adff) from module fifo_top (D = $0\count[4:0], Q = \count).
+Adding EN signal on $procdff$773 ($adff) from module fifo_top (D = $add$rtl/fifo_top.v:55$20_Y [3:0], Q = \wptr).
+Adding EN signal on $procdff$770 ($adff) from module fifo_top (D = $add$rtl/fifo_top.v:68$23_Y [3:0], Q = \rptr).
+Adding EN signal on $procdff$758 ($adff) from module fifo_top (D = $ge$rtl/fifo_top.v:99$39_Y, Q = \thresh_t).
+Adding EN signal on $procdff$755 ($dff) from module uart_regs (D = \din_i, Q = \baud_div_lsb).
+Adding EN signal on $procdff$754 ($dff) from module uart_regs (D = \din_i, Q = \baud_div_msb).
+Adding EN signal on $procdff$748 ($dff) from module uart_regs (D = \rx_fifo_data_in, Q = \rx_data).
+Adding EN signal on $procdff$747 ($adff) from module uart_regs (D = \din_i [0], Q = \fcr_fifo_enable).
+Adding EN signal on $procdff$738 ($adff) from module uart_regs (D = \din_i [3], Q = \fcr_dma_enable).
+Adding EN signal on $procdff$732 ($adff) from module uart_regs (D = \din_i [7:6], Q = \fcr_rx_trigger_level).
+Adding EN signal on $procdff$729 ($adff) from module uart_regs (D = \din_i [1:0], Q = \lcr_word_length_select).
+Adding EN signal on $procdff$726 ($adff) from module uart_regs (D = \din_i [2], Q = \lcr_stop_bits).
+Adding EN signal on $procdff$723 ($adff) from module uart_regs (D = \din_i [3], Q = \lcr_parity_enable).
+Adding EN signal on $procdff$720 ($adff) from module uart_regs (D = \din_i [4], Q = \lcr_even_parity_select).
+Adding EN signal on $procdff$717 ($adff) from module uart_regs (D = \din_i [5], Q = \lcr_stick_parity).
+Adding EN signal on $procdff$714 ($adff) from module uart_regs (D = \din_i [6], Q = \lcr_break_control).
+Adding EN signal on $procdff$711 ($adff) from module uart_regs (D = \din_i [7], Q = \lcr_divisor_latch_access).
+Adding EN signal on $procdff$708 ($dff) from module uart_regs (D = { \lcr_divisor_latch_access \lcr_break_control \lcr_stick_parity \lcr_even_parity_select \lcr_parity_enable \lcr_stop_bits \lcr_word_length_select }, Q = \lcr_reg_temp).
+Adding EN signal on $procdff$683 ($dff) from module uart_regs (D = { 3'011 \lsr_break_interrupt \lsr_framing_error \lsr_parity_error \lsr_overrun_error \lsr_data_ready }, Q = \lsr_temp).
+Adding EN signal on $procdff$682 ($adff) from module uart_regs (D = \din_i, Q = \scratch_reg).
+Adding EN signal on $procdff$679 ($dff) from module uart_regs (D = \scratch_reg, Q = \scratch_reg_temp).
+Setting constant 1-bit at position 5 on $auto$ff.cc:266:slice$802 ($dffe) from module uart_regs.
+Setting constant 1-bit at position 6 on $auto$ff.cc:266:slice$802 ($dffe) from module uart_regs.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$802 ($dffe) from module uart_regs.
+Adding EN signal on $procdff$676 ($dff) from module uart_rx_top (D = $procmux$376_Y, Q = \parity_bit).
+Adding EN signal on $procdff$671 ($adff) from module uart_rx_top (D = $procmux$402_Y, Q = \bit_counter).
+Adding EN signal on $procdff$668 ($adff) from module uart_rx_top (D = $procmux$417_Y, Q = \state).
+Adding EN signal on $procdff$662 ($adff) from module uart_rx_top (D = $not$rtl/uart_rx_top.v:102$125_Y, Q = \framing_error).
+Adding EN signal on $procdff$659 ($adff) from module uart_rx_top (D = \parity_bit, Q = \parity_error).
+Adding EN signal on $procdff$656 ($dff) from module uart_rx_top (D = $procmux$472_Y, Q = \baud_counter).
+Adding EN signal on $procdff$648 ($dff) from module uart_rx_top (D = $procmux$508_Y, Q = \data_out).
+Adding EN signal on $procdff$643 ($dff) from module uart_tx_top (D = \data_in, Q = \data_in_reg).
+Adding EN signal on $procdff$638 ($dff) from module uart_tx_top (D = $procmux$188_Y, Q = \data_parity).
+Adding EN signal on $procdff$633 ($adff) from module uart_tx_top (D = $procmux$200_Y, Q = \tx_bit).
+Adding EN signal on $procdff$630 ($adff) from module uart_tx_top (D = $procmux$234_Y, Q = \shift_reg).
+Adding EN signal on $procdff$627 ($adff) from module uart_tx_top (D = $procmux$255_Y, Q = \shift_reg_empty).
+Adding EN signal on $procdff$624 ($dff) from module uart_tx_top (D = $procmux$266_Y, Q = \parity_bit).
+Adding EN signal on $procdff$619 ($adff) from module uart_tx_top (D = $procmux$282_Y, Q = \bit_counter).
+Adding EN signal on $procdff$616 ($adff) from module uart_tx_top (D = $procmux$295_Y, Q = \state).
+Adding EN signal on $procdff$613 ($adff) from module uart_tx_top (D = $procmux$324_Y, Q = \baud_counter).
+Adding EN signal on $procdff$610 ($adff) from module uart_tx_top (D = $procmux$356_Y, Q = \pop).
+
+7.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+Removed 58 unused cells and 58 unused wires.
+<suppressed ~62 debug messages>
+
+7.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+<suppressed ~1 debug messages>
+Optimizing module uart_regs.
+Optimizing module uart_rx_top.
+<suppressed ~3 debug messages>
+Optimizing module uart_top.
+Optimizing module uart_tx_top.
+<suppressed ~7 debug messages>
+
+7.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fifo_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_regs..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_rx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \uart_tx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~130 debug messages>
+
+7.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fifo_top.
+  Optimizing cells in module \uart_regs.
+  Optimizing cells in module \uart_rx_top.
+  Optimizing cells in module \uart_top.
+  Optimizing cells in module \uart_tx_top.
+Performed a total of 0 changes.
+
+7.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Finding identical cells in module `\uart_regs'.
+Finding identical cells in module `\uart_rx_top'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `\uart_top'.
+Finding identical cells in module `\uart_tx_top'.
+<suppressed ~69 debug messages>
+Removed a total of 25 cells.
+
+7.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+Removed 0 unused cells and 25 unused wires.
+<suppressed ~2 debug messages>
+
+7.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module uart_regs.
+Optimizing module uart_rx_top.
+Optimizing module uart_top.
+Optimizing module uart_tx_top.
+
+7.8.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.8.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fifo_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_regs..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_rx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \uart_tx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~137 debug messages>
+
+7.8.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fifo_top.
+  Optimizing cells in module \uart_regs.
+  Optimizing cells in module \uart_rx_top.
+  Optimizing cells in module \uart_top.
+  Optimizing cells in module \uart_tx_top.
+Performed a total of 0 changes.
+
+7.8.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Finding identical cells in module `\uart_regs'.
+Finding identical cells in module `\uart_rx_top'.
+Finding identical cells in module `\uart_top'.
+Finding identical cells in module `\uart_tx_top'.
+Removed a total of 0 cells.
+
+7.8.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.8.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+
+7.8.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module uart_regs.
+Optimizing module uart_rx_top.
+Optimizing module uart_top.
+Optimizing module uart_tx_top.
+
+7.8.23. Finished OPT passes. (There is nothing left to do.)
+
+7.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 31 bits (of 32) from port B of cell fifo_top.$add$rtl/fifo_top.v:41$15 ($add).
+Removed top 27 bits (of 32) from port Y of cell fifo_top.$add$rtl/fifo_top.v:41$15 ($add).
+Removed top 31 bits (of 32) from port B of cell fifo_top.$sub$rtl/fifo_top.v:43$18 ($sub).
+Removed top 27 bits (of 32) from port Y of cell fifo_top.$sub$rtl/fifo_top.v:43$18 ($sub).
+Removed top 31 bits (of 32) from port B of cell fifo_top.$add$rtl/fifo_top.v:55$20 ($add).
+Removed top 28 bits (of 32) from port Y of cell fifo_top.$add$rtl/fifo_top.v:55$20 ($add).
+Removed top 31 bits (of 32) from port B of cell fifo_top.$add$rtl/fifo_top.v:68$23 ($add).
+Removed top 28 bits (of 32) from port Y of cell fifo_top.$add$rtl/fifo_top.v:68$23 ($add).
+Removed top 27 bits (of 32) from wire fifo_top.$add$rtl/fifo_top.v:41$15_Y.
+Removed top 2 bits (of 3) from port B of cell uart_regs.$eq$rtl/uart_regs.v:69$49 ($eq).
+Removed top 31 bits (of 32) from port B of cell uart_regs.$sub$rtl/uart_regs.v:84$63 ($sub).
+Removed top 16 bits (of 32) from port Y of cell uart_regs.$sub$rtl/uart_regs.v:84$63 ($sub).
+Removed top 1 bits (of 3) from port B of cell uart_regs.$eq$rtl/uart_regs.v:115$80 ($eq).
+Removed top 1 bits (of 3) from port B of cell uart_regs.$eq$rtl/uart_regs.v:161$86 ($eq).
+Removed top 1 bits (of 2) from port B of cell uart_regs.$procmux$553_CMP0 ($eq).
+Removed top 16 bits (of 32) from wire uart_regs.$sub$rtl/uart_regs.v:84$63_Y.
+Removed top 3 bits (of 8) from wire uart_regs.lsr_temp.
+Removed top 31 bits (of 32) from port B of cell uart_rx_top.$sub$rtl/uart_rx_top.v:119$127 ($sub).
+Removed top 29 bits (of 32) from port Y of cell uart_rx_top.$sub$rtl/uart_rx_top.v:119$127 ($sub).
+Removed top 31 bits (of 32) from port B of cell uart_rx_top.$sub$rtl/uart_rx_top.v:128$128 ($sub).
+Removed top 27 bits (of 32) from port Y of cell uart_rx_top.$sub$rtl/uart_rx_top.v:128$128 ($sub).
+Removed top 2 bits (of 5) from port B of cell uart_rx_top.$eq$rtl/uart_rx_top.v:129$129 ($eq).
+Removed top 1 bits (of 2) from port B of cell uart_rx_top.$procmux$379_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell uart_rx_top.$procmux$389_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell uart_rx_top.$procmux$409_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell uart_rx_top.$procmux$424_CMP0 ($eq).
+Removed top 2 bits (of 3) from mux cell uart_rx_top.$procmux$441 ($mux).
+Removed top 2 bits (of 3) from mux cell uart_rx_top.$procmux$447 ($mux).
+Removed top 1 bits (of 2) from port B of cell uart_rx_top.$procmux$511_CMP0 ($eq).
+Removed top 2 bits (of 3) from wire uart_rx_top.$procmux$441_Y.
+Removed top 2 bits (of 3) from wire uart_rx_top.$procmux$447_Y.
+Removed top 29 bits (of 32) from wire uart_rx_top.$sub$rtl/uart_rx_top.v:119$127_Y.
+Removed top 31 bits (of 32) from port B of cell uart_tx_top.$sub$rtl/uart_tx_top.v:101$152 ($sub).
+Removed top 27 bits (of 32) from port Y of cell uart_tx_top.$sub$rtl/uart_tx_top.v:101$152 ($sub).
+Removed top 31 bits (of 32) from port B of cell uart_tx_top.$sub$rtl/uart_tx_top.v:107$153 ($sub).
+Removed top 29 bits (of 32) from port Y of cell uart_tx_top.$sub$rtl/uart_tx_top.v:107$153 ($sub).
+Removed top 1 bits (of 5) from mux cell uart_tx_top.$ternary$rtl/uart_tx_top.v:133$160 ($mux).
+Removed top 1 bits (of 5) from mux cell uart_tx_top.$ternary$rtl/uart_tx_top.v:150$166 ($mux).
+Removed top 1 bits (of 2) from port B of cell uart_tx_top.$procmux$191_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell uart_tx_top.$procmux$194_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell uart_tx_top.$procmux$269_CMP0 ($eq).
+Removed top 1 bits (of 2) from mux cell uart_tx_top.$procmux$314 ($mux).
+Removed top 1 bits (of 2) from wire uart_tx_top.$procmux$314_Y.
+Removed top 27 bits (of 32) from wire uart_tx_top.$sub$rtl/uart_tx_top.v:101$152_Y.
+
+7.10. Executing PEEPOPT pass (run peephole optimizers).
+
+7.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+Removed 0 unused cells and 8 unused wires.
+<suppressed ~4 debug messages>
+
+7.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module fifo_top:
+  creating $macc model for $add$rtl/fifo_top.v:41$15 ($add).
+  creating $macc model for $add$rtl/fifo_top.v:55$20 ($add).
+  creating $macc model for $add$rtl/fifo_top.v:68$23 ($add).
+  creating $macc model for $sub$rtl/fifo_top.v:43$18 ($sub).
+  creating $alu model for $macc $sub$rtl/fifo_top.v:43$18.
+  creating $alu model for $macc $add$rtl/fifo_top.v:68$23.
+  creating $alu model for $macc $add$rtl/fifo_top.v:55$20.
+  creating $alu model for $macc $add$rtl/fifo_top.v:41$15.
+  creating $alu model for $ge$rtl/fifo_top.v:99$39 ($ge): new $alu
+  creating $alu cell for $ge$rtl/fifo_top.v:99$39: $auto$alumacc.cc:495:replace_alu$964
+  creating $alu cell for $add$rtl/fifo_top.v:41$15: $auto$alumacc.cc:495:replace_alu$977
+  creating $alu cell for $add$rtl/fifo_top.v:55$20: $auto$alumacc.cc:495:replace_alu$980
+  creating $alu cell for $add$rtl/fifo_top.v:68$23: $auto$alumacc.cc:495:replace_alu$983
+  creating $alu cell for $sub$rtl/fifo_top.v:43$18: $auto$alumacc.cc:495:replace_alu$986
+  created 5 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module uart_regs:
+  creating $macc model for $sub$rtl/uart_regs.v:84$63 ($sub).
+  creating $alu model for $macc $sub$rtl/uart_regs.v:84$63.
+  creating $alu cell for $sub$rtl/uart_regs.v:84$63: $auto$alumacc.cc:495:replace_alu$989
+  created 1 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module uart_rx_top:
+  creating $macc model for $sub$rtl/uart_rx_top.v:119$127 ($sub).
+  creating $macc model for $sub$rtl/uart_rx_top.v:128$128 ($sub).
+  creating $alu model for $macc $sub$rtl/uart_rx_top.v:128$128.
+  creating $alu model for $macc $sub$rtl/uart_rx_top.v:119$127.
+  creating $alu cell for $sub$rtl/uart_rx_top.v:119$127: $auto$alumacc.cc:495:replace_alu$992
+  creating $alu cell for $sub$rtl/uart_rx_top.v:128$128: $auto$alumacc.cc:495:replace_alu$995
+  created 2 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module uart_top:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module uart_tx_top:
+  creating $macc model for $sub$rtl/uart_tx_top.v:101$152 ($sub).
+  creating $macc model for $sub$rtl/uart_tx_top.v:107$153 ($sub).
+  creating $alu model for $macc $sub$rtl/uart_tx_top.v:107$153.
+  creating $alu model for $macc $sub$rtl/uart_tx_top.v:101$152.
+  creating $alu cell for $sub$rtl/uart_tx_top.v:101$152: $auto$alumacc.cc:495:replace_alu$998
+  creating $alu cell for $sub$rtl/uart_tx_top.v:107$153: $auto$alumacc.cc:495:replace_alu$1001
+  created 2 $alu and 0 $macc cells.
+
+7.13. Executing SHARE pass (SAT-based resource sharing).
+
+7.14. Executing OPT pass (performing simple optimizations).
+
+7.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module uart_regs.
+Optimizing module uart_rx_top.
+Optimizing module uart_top.
+Optimizing module uart_tx_top.
+
+7.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Finding identical cells in module `\uart_regs'.
+Finding identical cells in module `\uart_rx_top'.
+Finding identical cells in module `\uart_top'.
+Finding identical cells in module `\uart_tx_top'.
+Removed a total of 0 cells.
+
+7.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fifo_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_regs..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_rx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \uart_tx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~137 debug messages>
+
+7.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fifo_top.
+  Optimizing cells in module \uart_regs.
+  Optimizing cells in module \uart_rx_top.
+  Optimizing cells in module \uart_top.
+  Optimizing cells in module \uart_tx_top.
+Performed a total of 0 changes.
+
+7.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Finding identical cells in module `\uart_regs'.
+Finding identical cells in module `\uart_rx_top'.
+Finding identical cells in module `\uart_top'.
+Finding identical cells in module `\uart_tx_top'.
+Removed a total of 0 cells.
+
+7.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+7.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module uart_regs.
+Optimizing module uart_rx_top.
+Optimizing module uart_top.
+Optimizing module uart_tx_top.
+
+7.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fifo_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_regs..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_rx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \uart_tx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~137 debug messages>
+
+7.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fifo_top.
+  Optimizing cells in module \uart_regs.
+  Optimizing cells in module \uart_rx_top.
+  Optimizing cells in module \uart_top.
+  Optimizing cells in module \uart_tx_top.
+Performed a total of 0 changes.
+
+7.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Finding identical cells in module `\uart_regs'.
+Finding identical cells in module `\uart_rx_top'.
+Finding identical cells in module `\uart_top'.
+Finding identical cells in module `\uart_tx_top'.
+Removed a total of 0 cells.
+
+7.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+
+7.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module uart_regs.
+Optimizing module uart_rx_top.
+Optimizing module uart_top.
+Optimizing module uart_tx_top.
+
+7.14.16. Finished OPT passes. (There is nothing left to do.)
+
+7.15. Executing MEMORY pass.
+
+7.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+7.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+7.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing fifo_top.mem write port 0.
+
+7.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+7.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\mem'[0] in module `\fifo_top': no output FF found.
+Checking read port address `\mem'[0] in module `\fifo_top': address FF has async set and/or reset, not supported.
+
+7.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+
+7.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+7.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+7.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+
+7.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+7.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+
+7.17. Executing OPT pass (performing simple optimizations).
+
+7.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+<suppressed ~5 debug messages>
+Optimizing module uart_regs.
+<suppressed ~4 debug messages>
+Optimizing module uart_rx_top.
+<suppressed ~20 debug messages>
+Optimizing module uart_top.
+Optimizing module uart_tx_top.
+<suppressed ~25 debug messages>
+
+7.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Finding identical cells in module `\uart_regs'.
+Finding identical cells in module `\uart_rx_top'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\uart_top'.
+Finding identical cells in module `\uart_tx_top'.
+<suppressed ~3 debug messages>
+Removed a total of 2 cells.
+
+7.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+Removed 4 unused cells and 37 unused wires.
+<suppressed ~8 debug messages>
+
+7.17.5. Finished fast OPT passes.
+
+7.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \mem in module \fifo_top:
+  created 16 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 15 $mux cells.
+  write interface: 16 write mux blocks.
+
+7.19. Executing OPT pass (performing simple optimizations).
+
+7.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+<suppressed ~8 debug messages>
+Optimizing module uart_regs.
+Optimizing module uart_rx_top.
+Optimizing module uart_top.
+Optimizing module uart_tx_top.
+<suppressed ~2 debug messages>
+
+7.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Finding identical cells in module `\uart_regs'.
+Finding identical cells in module `\uart_rx_top'.
+Finding identical cells in module `\uart_top'.
+Finding identical cells in module `\uart_tx_top'.
+Removed a total of 0 cells.
+
+7.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fifo_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_regs..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_rx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \uart_tx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~122 debug messages>
+
+7.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fifo_top.
+  Optimizing cells in module \uart_regs.
+  Optimizing cells in module \uart_rx_top.
+    Consolidated identical input bits for $mux cell $procmux$415:
+      Old ports: A=3'000, B=3'100, Y=$procmux$415_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$415_Y [2]
+      New connections: $procmux$415_Y [1:0] = 2'00
+    Consolidated identical input bits for $mux cell $procmux$422:
+      Old ports: A=3'100, B=3'011, Y=$procmux$422_Y
+      New ports: A=2'10, B=2'01, Y={ $procmux$422_Y [2] $procmux$422_Y [0] }
+      New connections: $procmux$422_Y [1] = $procmux$422_Y [0]
+    Consolidated identical input bits for $mux cell $procmux$427:
+      Old ports: A=3'100, B=3'011, Y=$procmux$427_Y
+      New ports: A=2'10, B=2'01, Y={ $procmux$427_Y [2] $procmux$427_Y [0] }
+      New connections: $procmux$427_Y [1] = $procmux$427_Y [0]
+    Consolidated identical input bits for $mux cell $procmux$443:
+      Old ports: A=3'010, B={ 2'00 $auto$wreduce.cc:514:run$958 [0] }, Y=$procmux$443_Y
+      New ports: A=2'10, B={ 1'0 $auto$wreduce.cc:514:run$958 [0] }, Y=$procmux$443_Y [1:0]
+      New connections: $procmux$443_Y [2] = 1'0
+    Consolidated identical input bits for $pmux cell $procmux$508:
+      Old ports: A={ 3'000 \rx \data_out [4:1] }, B={ 2'00 \rx \data_out [5:1] 1'0 \rx \data_out [6:1] \rx \data_out [7:1] }, Y=$procmux$508_Y
+      New ports: A={ 3'000 \rx }, B={ 2'00 \rx \data_out [5] 1'0 \rx \data_out [6:5] \rx \data_out [7:5] }, Y=$procmux$508_Y [7:4]
+      New connections: $procmux$508_Y [3:0] = \data_out [4:1]
+  Optimizing cells in module \uart_rx_top.
+  Optimizing cells in module \uart_top.
+  Optimizing cells in module \uart_tx_top.
+    New ctrl vector for $pmux cell $procmux$234: $auto$opt_reduce.cc:137:opt_pmux$1212
+    Consolidated identical input bits for $mux cell $procmux$293:
+      Old ports: A=2'00, B=2'11, Y=$procmux$293_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$293_Y [0]
+      New connections: $procmux$293_Y [1] = $procmux$293_Y [0]
+    Consolidated identical input bits for $mux cell $procmux$298:
+      Old ports: A=2'00, B=2'11, Y=$procmux$298_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$298_Y [0]
+      New connections: $procmux$298_Y [1] = $procmux$298_Y [0]
+    New ctrl vector for $pmux cell $procmux$324: { $procmux$214_CMP $procmux$201_CMP }
+    Consolidated identical input bits for $mux cell $ternary$rtl/uart_tx_top.v:133$160:
+      Old ports: A=4'1111, B=4'0111, Y=$ternary$rtl/uart_tx_top.v:133$160_Y [3:0]
+      New ports: A=1'1, B=1'0, Y=$ternary$rtl/uart_tx_top.v:133$160_Y [3]
+      New connections: $ternary$rtl/uart_tx_top.v:133$160_Y [2:0] = 3'111
+    Consolidated identical input bits for $mux cell $ternary$rtl/uart_tx_top.v:150$166:
+      Old ports: A=4'1111, B=4'0001, Y=$ternary$rtl/uart_tx_top.v:150$166_Y [3:0]
+      New ports: A=1'1, B=1'0, Y=$ternary$rtl/uart_tx_top.v:150$166_Y [1]
+      New connections: { $ternary$rtl/uart_tx_top.v:150$166_Y [3:2] $ternary$rtl/uart_tx_top.v:150$166_Y [0] } = { $ternary$rtl/uart_tx_top.v:150$166_Y [1] $ternary$rtl/uart_tx_top.v:150$166_Y [1] 1'1 }
+  Optimizing cells in module \uart_tx_top.
+    Consolidated identical input bits for $mux cell $ternary$rtl/uart_tx_top.v:133$161:
+      Old ports: A=5'01111, B={ 1'1 $ternary$rtl/uart_tx_top.v:133$160_Y [3:0] }, Y=$ternary$rtl/uart_tx_top.v:133$161_Y
+      New ports: A=2'01, B={ 1'1 $ternary$rtl/uart_tx_top.v:133$160_Y [3] }, Y=$ternary$rtl/uart_tx_top.v:133$161_Y [4:3]
+      New connections: $ternary$rtl/uart_tx_top.v:133$161_Y [2:0] = 3'111
+    Consolidated identical input bits for $mux cell $ternary$rtl/uart_tx_top.v:150$167:
+      Old ports: A=5'01111, B={ 1'1 $ternary$rtl/uart_tx_top.v:150$166_Y [3:0] }, Y=$ternary$rtl/uart_tx_top.v:150$167_Y
+      New ports: A=2'01, B={ 1'1 $ternary$rtl/uart_tx_top.v:150$166_Y [1] }, Y={ $ternary$rtl/uart_tx_top.v:150$167_Y [4] $ternary$rtl/uart_tx_top.v:150$167_Y [1] }
+      New connections: { $ternary$rtl/uart_tx_top.v:150$167_Y [3:2] $ternary$rtl/uart_tx_top.v:150$167_Y [0] } = { $ternary$rtl/uart_tx_top.v:150$167_Y [1] $ternary$rtl/uart_tx_top.v:150$167_Y [1] 1'1 }
+  Optimizing cells in module \uart_tx_top.
+    Consolidated identical input bits for $mux cell $procmux$327:
+      Old ports: A=$ternary$rtl/uart_tx_top.v:133$161_Y, B=5'01111, Y=$procmux$327_Y
+      New ports: A=$ternary$rtl/uart_tx_top.v:133$161_Y [4:3], B=2'01, Y=$procmux$327_Y [4:3]
+      New connections: $procmux$327_Y [2:0] = 3'111
+  Optimizing cells in module \uart_tx_top.
+Performed a total of 14 changes.
+
+7.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Finding identical cells in module `\uart_regs'.
+Finding identical cells in module `\uart_rx_top'.
+Finding identical cells in module `\uart_top'.
+Finding identical cells in module `\uart_tx_top'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+7.19.6. Executing OPT_SHARE pass.
+    Found cells that share an operand and can be merged by moving the $mux $procmux$603 in front of them:
+        $auto$alumacc.cc:495:replace_alu$977
+        $auto$alumacc.cc:495:replace_alu$986
+
+7.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $auto$ff.cc:266:slice$888 ($adffe) from module uart_tx_top (D = $procmux$234_Y, Q = \shift_reg).
+
+7.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+Removed 0 unused cells and 45 unused wires.
+<suppressed ~2 debug messages>
+
+7.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+<suppressed ~2 debug messages>
+Optimizing module uart_regs.
+Optimizing module uart_rx_top.
+<suppressed ~1 debug messages>
+Optimizing module uart_top.
+Optimizing module uart_tx_top.
+<suppressed ~4 debug messages>
+
+7.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fifo_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_regs..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_rx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \uart_tx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~116 debug messages>
+
+7.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fifo_top.
+    Consolidated identical input bits for $mux cell $auto$opt_share.cc:244:merge_operators$1216:
+      Old ports: A=5'11111, B=5'00001, Y=$auto$rtlil.cc:3094:Mux$1217
+      New ports: A=1'1, B=1'0, Y=$auto$rtlil.cc:3094:Mux$1217 [1]
+      New connections: { $auto$rtlil.cc:3094:Mux$1217 [4:2] $auto$rtlil.cc:3094:Mux$1217 [0] } = { $auto$rtlil.cc:3094:Mux$1217 [1] $auto$rtlil.cc:3094:Mux$1217 [1] $auto$rtlil.cc:3094:Mux$1217 [1] 1'1 }
+  Optimizing cells in module \fifo_top.
+  Optimizing cells in module \uart_regs.
+  Optimizing cells in module \uart_rx_top.
+  Optimizing cells in module \uart_top.
+  Optimizing cells in module \uart_tx_top.
+    New input vector for $reduce_and cell $auto$opt_dff.cc:273:make_patterns_logic$1224: { $auto$opt_dff.cc:247:make_patterns_logic$891 $auto$opt_dff.cc:247:make_patterns_logic$880 $auto$opt_dff.cc:247:make_patterns_logic$895 $auto$opt_dff.cc:247:make_patterns_logic$876 $auto$opt_dff.cc:247:make_patterns_logic$1221 \baud_pulse }
+  Optimizing cells in module \uart_tx_top.
+Performed a total of 2 changes.
+
+7.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Finding identical cells in module `\uart_regs'.
+Finding identical cells in module `\uart_rx_top'.
+Finding identical cells in module `\uart_top'.
+Finding identical cells in module `\uart_tx_top'.
+Removed a total of 0 cells.
+
+7.19.14. Executing OPT_SHARE pass.
+
+7.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\mem[9]$1024 ($dff) from module fifo_top (D = \data_in, Q = \mem[9]).
+Adding EN signal on $memory\mem[8]$1022 ($dff) from module fifo_top (D = \data_in, Q = \mem[8]).
+Adding EN signal on $memory\mem[7]$1020 ($dff) from module fifo_top (D = \data_in, Q = \mem[7]).
+Adding EN signal on $memory\mem[6]$1018 ($dff) from module fifo_top (D = \data_in, Q = \mem[6]).
+Adding EN signal on $memory\mem[5]$1016 ($dff) from module fifo_top (D = \data_in, Q = \mem[5]).
+Adding EN signal on $memory\mem[4]$1014 ($dff) from module fifo_top (D = \data_in, Q = \mem[4]).
+Adding EN signal on $memory\mem[3]$1012 ($dff) from module fifo_top (D = \data_in, Q = \mem[3]).
+Adding EN signal on $memory\mem[2]$1010 ($dff) from module fifo_top (D = \data_in, Q = \mem[2]).
+Adding EN signal on $memory\mem[1]$1008 ($dff) from module fifo_top (D = \data_in, Q = \mem[1]).
+Adding EN signal on $memory\mem[15]$1036 ($dff) from module fifo_top (D = \data_in, Q = \mem[15]).
+Adding EN signal on $memory\mem[14]$1034 ($dff) from module fifo_top (D = \data_in, Q = \mem[14]).
+Adding EN signal on $memory\mem[13]$1032 ($dff) from module fifo_top (D = \data_in, Q = \mem[13]).
+Adding EN signal on $memory\mem[12]$1030 ($dff) from module fifo_top (D = \data_in, Q = \mem[12]).
+Adding EN signal on $memory\mem[11]$1028 ($dff) from module fifo_top (D = \data_in, Q = \mem[11]).
+Adding EN signal on $memory\mem[10]$1026 ($dff) from module fifo_top (D = \data_in, Q = \mem[10]).
+Adding EN signal on $memory\mem[0]$1006 ($dff) from module fifo_top (D = \data_in, Q = \mem[0]).
+
+7.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+Removed 17 unused cells and 23 unused wires.
+<suppressed ~20 debug messages>
+
+7.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+<suppressed ~1 debug messages>
+Optimizing module uart_regs.
+Optimizing module uart_rx_top.
+Optimizing module uart_top.
+Optimizing module uart_tx_top.
+
+7.19.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.19.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fifo_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_regs..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_rx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \uart_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \uart_tx_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~82 debug messages>
+
+7.19.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fifo_top.
+  Optimizing cells in module \uart_regs.
+  Optimizing cells in module \uart_rx_top.
+  Optimizing cells in module \uart_top.
+  Optimizing cells in module \uart_tx_top.
+Performed a total of 0 changes.
+
+7.19.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Finding identical cells in module `\uart_regs'.
+Finding identical cells in module `\uart_rx_top'.
+Finding identical cells in module `\uart_top'.
+Finding identical cells in module `\uart_tx_top'.
+Removed a total of 0 cells.
+
+7.19.22. Executing OPT_SHARE pass.
+
+7.19.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.19.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+
+7.19.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module uart_regs.
+Optimizing module uart_rx_top.
+Optimizing module uart_top.
+Optimizing module uart_tx_top.
+
+7.19.26. Finished OPT passes. (There is nothing left to do.)
+
+7.20. Executing TECHMAP pass (map to technology primitives).
+
+7.20.1. Executing Verilog-2005 frontend: /foss/tools/yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/foss/tools/yosys/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+7.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $adffe.
+Using template $paramod$dc04b7d98e503a7bab16fce2df70e6e2c5ca34d6\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_xor.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using template $paramod$b8c0a997bce700f23568a5ada79cc6781d1f5ca0\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $eq.
+Using template $paramod$d629d85c8826a74239b9178d1930215a43b0ceb0\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $reduce_or.
+Using template $paramod$97565c3687be688407d1272a293bd9d0ae6852dc\_90_pmux for cells of type $pmux.
+Using template $paramod$70d30c21ff772b34d0d1da2801fbd781dc3c70e4\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000011 for cells of type $lcu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $reduce_xnor.
+Using template $paramod$d31bf4d7d72e59528d18fbd4f322e9d608532043\_90_pmux for cells of type $pmux.
+Using template $paramod$c2e415ef15bc3ccd2723772353a6b450d3d76206\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $dff.
+Using template $paramod$a1665ef28c749ebcdbe9aecd466e644647b56463\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_or.
+Using template $paramod$f42569e367821ad1b7d52f2d157a44ce80c766dc\_90_pmux for cells of type $pmux.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000010000 for cells of type $lcu.
+Using template $paramod$32a7b7b86c07519b7537abc18e96f0331f97914d\_90_alu for cells of type $alu.
+Using template $paramod$b18e16801adf491a64caa0542270798e5d4ac6b6\_90_alu for cells of type $alu.
+Using template $paramod$dad13a281fa6a9ffd6dd427a87dc9a952e80e9ea\_90_alu for cells of type $alu.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~1358 debug messages>
+
+7.21. Executing OPT pass (performing simple optimizations).
+
+7.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+<suppressed ~71 debug messages>
+Optimizing module uart_regs.
+<suppressed ~133 debug messages>
+Optimizing module uart_rx_top.
+<suppressed ~150 debug messages>
+Optimizing module uart_top.
+Optimizing module uart_tx_top.
+<suppressed ~96 debug messages>
+
+7.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+<suppressed ~48 debug messages>
+Finding identical cells in module `\uart_regs'.
+<suppressed ~99 debug messages>
+Finding identical cells in module `\uart_rx_top'.
+<suppressed ~90 debug messages>
+Finding identical cells in module `\uart_top'.
+Finding identical cells in module `\uart_tx_top'.
+<suppressed ~129 debug messages>
+Removed a total of 122 cells.
+
+7.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+Removed 38 unused cells and 781 unused wires.
+<suppressed ~42 debug messages>
+
+7.21.5. Finished fast OPT passes.
+
+7.22. Executing ABC pass (technology mapping using ABC).
+
+7.22.1. Extracting gate netlist of module `\fifo_top' to `<abc-temp-dir>/input.blif'..
+Extracted 245 gates and 393 wires to a netlist network with 148 inputs and 46 outputs.
+
+7.22.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+7.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        8
+ABC RESULTS:            ANDNOT cells:       37
+ABC RESULTS:               MUX cells:      120
+ABC RESULTS:              NAND cells:        3
+ABC RESULTS:               NOT cells:        7
+ABC RESULTS:                OR cells:       23
+ABC RESULTS:             ORNOT cells:       13
+ABC RESULTS:              XNOR cells:        4
+ABC RESULTS:               XOR cells:       15
+ABC RESULTS:        internal signals:      199
+ABC RESULTS:           input signals:      148
+ABC RESULTS:          output signals:       46
+Removing temp directory.
+
+7.22.2. Extracting gate netlist of module `\uart_regs' to `<abc-temp-dir>/input.blif'..
+Extracted 276 gates and 351 wires to a netlist network with 74 inputs and 43 outputs.
+
+7.22.2.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+7.22.2.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       20
+ABC RESULTS:            ANDNOT cells:       66
+ABC RESULTS:               MUX cells:       32
+ABC RESULTS:              NAND cells:       13
+ABC RESULTS:               NOR cells:       19
+ABC RESULTS:               NOT cells:       10
+ABC RESULTS:                OR cells:       44
+ABC RESULTS:             ORNOT cells:        6
+ABC RESULTS:              XNOR cells:        1
+ABC RESULTS:               XOR cells:       14
+ABC RESULTS:        internal signals:      234
+ABC RESULTS:           input signals:       74
+ABC RESULTS:          output signals:       43
+Removing temp directory.
+
+7.22.3. Extracting gate netlist of module `\uart_rx_top' to `<abc-temp-dir>/input.blif'..
+Extracted 225 gates and 255 wires to a netlist network with 28 inputs and 25 outputs.
+
+7.22.3.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+7.22.3.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        7
+ABC RESULTS:            ANDNOT cells:       70
+ABC RESULTS:               MUX cells:       18
+ABC RESULTS:              NAND cells:        7
+ABC RESULTS:               NOR cells:       11
+ABC RESULTS:               NOT cells:        6
+ABC RESULTS:                OR cells:       38
+ABC RESULTS:             ORNOT cells:       16
+ABC RESULTS:              XNOR cells:        4
+ABC RESULTS:               XOR cells:       10
+ABC RESULTS:        internal signals:      202
+ABC RESULTS:           input signals:       28
+ABC RESULTS:          output signals:       25
+Removing temp directory.
+
+7.22.4. Extracting gate netlist of module `\uart_top' to `<abc-temp-dir>/input.blif'..
+Extracted 0 gates and 0 wires to a netlist network with 0 inputs and 0 outputs.
+Don't call ABC as there is nothing to map.
+Removing temp directory.
+
+7.22.5. Extracting gate netlist of module `\uart_tx_top' to `<abc-temp-dir>/input.blif'..
+Extracted 207 gates and 256 wires to a netlist network with 47 inputs and 33 outputs.
+
+7.22.5.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+7.22.5.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        5
+ABC RESULTS:            ANDNOT cells:       64
+ABC RESULTS:               MUX cells:       29
+ABC RESULTS:              NAND cells:        6
+ABC RESULTS:               NOR cells:       14
+ABC RESULTS:               NOT cells:       14
+ABC RESULTS:                OR cells:       29
+ABC RESULTS:             ORNOT cells:        4
+ABC RESULTS:              XNOR cells:        6
+ABC RESULTS:               XOR cells:       13
+ABC RESULTS:        internal signals:      176
+ABC RESULTS:           input signals:       47
+ABC RESULTS:          output signals:       33
+Removing temp directory.
+
+7.23. Executing OPT pass (performing simple optimizations).
+
+7.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+<suppressed ~56 debug messages>
+Optimizing module uart_regs.
+<suppressed ~10 debug messages>
+Optimizing module uart_rx_top.
+Optimizing module uart_top.
+Optimizing module uart_tx_top.
+<suppressed ~8 debug messages>
+
+7.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\uart_regs'.
+<suppressed ~21 debug messages>
+Finding identical cells in module `\uart_rx_top'.
+<suppressed ~9 debug messages>
+Finding identical cells in module `\uart_top'.
+Finding identical cells in module `\uart_tx_top'.
+<suppressed ~12 debug messages>
+Removed a total of 15 cells.
+
+7.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module \uart_regs..
+Finding unused cells or wires in module \uart_rx_top..
+Finding unused cells or wires in module \uart_top..
+Finding unused cells or wires in module \uart_tx_top..
+Removed 4 unused cells and 851 unused wires.
+<suppressed ~8 debug messages>
+
+7.23.5. Finished fast OPT passes.
+
+7.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `uart_top'. Setting top module to uart_top.
+
+7.24.1. Analyzing design hierarchy..
+Top module:  \uart_top
+Used module:     \fifo_top
+Used module:     \uart_regs
+Used module:     \uart_rx_top
+Used module:     \uart_tx_top
+
+7.24.2. Analyzing design hierarchy..
+Top module:  \uart_top
+Used module:     \fifo_top
+Used module:     \uart_regs
+Used module:     \uart_rx_top
+Used module:     \uart_tx_top
+Removed 0 unused modules.
+
+7.25. Printing statistics.
+
+=== fifo_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      245 wires
+      404 wire bits
+       37 public wires
+      176 public wire bits
+       13 ports
+       30 port bits
+      371 cells
+       37   $_ANDNOT_
+        8   $_AND_
+       14   $_DFFE_PP0P_
+      128   $_DFFE_PP_
+        2   $_DFF_PP0_
+      120   $_MUX_
+        3   $_NAND_
+        5   $_NOT_
+       13   $_ORNOT_
+       23   $_OR_
+        4   $_XNOR_
+       14   $_XOR_
+
+=== uart_regs ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      248 wires
+      405 wire bits
+       62 public wires
+      197 public wire bits
+       25 ports
+       93 port bits
+      315 cells
+       66   $_ANDNOT_
+       20   $_AND_
+       20   $_DFFE_PP0P_
+       45   $_DFFE_PP_
+       23   $_DFF_PP0_
+       10   $_DFF_P_
+       32   $_MUX_
+       13   $_NAND_
+       12   $_NOR_
+        9   $_NOT_
+        6   $_ORNOT_
+       44   $_OR_
+        1   $_XNOR_
+       14   $_XOR_
+
+=== uart_rx_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      194 wires
+      221 wire bits
+       19 public wires
+       35 public wire bits
+       13 ports
+       21 port bits
+      208 cells
+       70   $_ANDNOT_
+        7   $_AND_
+        8   $_DFFE_PP0P_
+       14   $_DFFE_PP_
+        1   $_DFF_PP0_
+        1   $_DFF_P_
+       18   $_MUX_
+        7   $_NAND_
+        9   $_NOR_
+        6   $_NOT_
+       16   $_ORNOT_
+       37   $_OR_
+        4   $_XNOR_
+       10   $_XOR_
+
+=== uart_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       34 wires
+      116 wire bits
+       34 public wires
+      116 public wire bits
+        9 ports
+       25 port bits
+        5 submodules
+        2   fifo_top
+        1   uart_regs
+        1   uart_rx_top
+        1   uart_tx_top
+
+=== uart_tx_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      196 wires
+      232 wire bits
+       22 public wires
+       51 public wire bits
+       14 ports
+       22 port bits
+      211 cells
+       64   $_ANDNOT_
+        4   $_AND_
+       16   $_DFFE_PP0P_
+        5   $_DFFE_PP1P_
+       10   $_DFFE_PP_
+        1   $_DFF_PP1_
+       29   $_MUX_
+        6   $_NAND_
+       12   $_NOR_
+       13   $_NOT_
+        4   $_ORNOT_
+       29   $_OR_
+        6   $_XNOR_
+       12   $_XOR_
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+     1476 uart_top
+      371 fifo_top
+      315 uart_regs
+      208 uart_rx_top
+      211 uart_tx_top
+
+        +----------Count including submodules.
+        | 
+     1162 wires
+     1782 wire bits
+      211 public wires
+      751 public wire bits
+       87 ports
+      221 port bits
+        - memories
+        - memory bits
+        - processes
+     1476 cells
+      274   $_ANDNOT_
+       47   $_AND_
+       72   $_DFFE_PP0P_
+        5   $_DFFE_PP1P_
+      325   $_DFFE_PP_
+       28   $_DFF_PP0_
+        1   $_DFF_PP1_
+       11   $_DFF_P_
+      319   $_MUX_
+       32   $_NAND_
+       33   $_NOR_
+       38   $_NOT_
+       52   $_ORNOT_
+      156   $_OR_
+       19   $_XNOR_
+       64   $_XOR_
+        5 submodules
+        2   fifo_top
+        1   uart_regs
+        1   uart_rx_top
+        1   uart_tx_top
+
+7.26. Executing CHECK pass (checking for obvious problems).
+Checking module fifo_top...
+Checking module uart_regs...
+Checking module uart_rx_top...
+Checking module uart_top...
+Checking module uart_tx_top...
+Found and reported 0 problems.
+
+8. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell gf180mcu_fd_sc_mcu7t5v0__dffnq_1 (noninv, pins=3, area=65.86) is a direct match for cell type $_DFF_N_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffq_1 (noninv, pins=3, area=63.66) is a direct match for cell type $_DFF_P_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1 (noninv, pins=4, area=74.64) is a direct match for cell type $_DFF_NN0_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffnsnq_1 (noninv, pins=4, area=79.03) is a direct match for cell type $_DFF_NN1_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 (noninv, pins=4, area=74.64) is a direct match for cell type $_DFF_PN0_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffsnq_1 (noninv, pins=4, area=79.03) is a direct match for cell type $_DFF_PN1_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_1 (noninv, pins=5, area=94.39) is a direct match for cell type $_DFFSR_NNN_.
+  cell gf180mcu_fd_sc_mcu7t5v0__dffrsnq_1 (noninv, pins=5, area=85.61) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    \gf180mcu_fd_sc_mcu7t5v0__dffnq_1 _DFF_N_ (.CLKN( C), .D( D), .Q( Q));
+    \gf180mcu_fd_sc_mcu7t5v0__dffq_1 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    \gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1 _DFF_NN0_ (.CLKN( C), .D( D), .Q( Q), .RN( R));
+    \gf180mcu_fd_sc_mcu7t5v0__dffnsnq_1 _DFF_NN1_ (.CLKN( C), .D( D), .Q( Q), .SETN( R));
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RN( R));
+    \gf180mcu_fd_sc_mcu7t5v0__dffsnq_1 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SETN( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    \gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_1 _DFFSR_NNN_ (.CLKN( C), .D( D), .Q( Q), .RN( R), .SETN( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \gf180mcu_fd_sc_mcu7t5v0__dffrsnq_1 _DFFSR_PNN_ (.CLK( C), .D( D), .Q( Q), .RN( R), .SETN( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+8.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+<suppressed ~12 debug messages>
+Mapping DFF cells in module `\fifo_top':
+  mapped 16 $_DFF_PN0_ cells to \gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 cells.
+  mapped 128 $_DFF_P_ cells to \gf180mcu_fd_sc_mcu7t5v0__dffq_1 cells.
+Mapping DFF cells in module `\uart_regs':
+  mapped 43 $_DFF_PN0_ cells to \gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 cells.
+  mapped 55 $_DFF_P_ cells to \gf180mcu_fd_sc_mcu7t5v0__dffq_1 cells.
+Mapping DFF cells in module `\uart_rx_top':
+  mapped 9 $_DFF_PN0_ cells to \gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 cells.
+  mapped 15 $_DFF_P_ cells to \gf180mcu_fd_sc_mcu7t5v0__dffq_1 cells.
+Mapping DFF cells in module `\uart_top':
+Mapping DFF cells in module `\uart_tx_top':
+  mapped 16 $_DFF_PN0_ cells to \gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 cells.
+  mapped 6 $_DFF_PN1_ cells to \gf180mcu_fd_sc_mcu7t5v0__dffsnq_1 cells.
+  mapped 10 $_DFF_P_ cells to \gf180mcu_fd_sc_mcu7t5v0__dffq_1 cells.
+
+9. Executing ABC pass (technology mapping using ABC).
+
+9.1. Extracting gate netlist of module `\fifo_top' to `<abc-temp-dir>/input.blif'..
+Extracted 385 gates and 543 wires to a netlist network with 158 inputs and 170 outputs.
+
+9.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.11 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__antenna" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_3".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_12".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_16".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__endcap" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_16" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_32" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_64" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_16" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_32" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_64" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__filltie" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__hold".
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtn_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtn_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtn_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_3".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_12".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_16".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffsnq_4".
+ABC: Library "gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80" from "/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80.lib" has 145 cells (84 skipped: 48 seq; 15 tri-state; 21 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.17 sec
+ABC: Memory =   30.19 MB. Time =     0.17 sec
+ABC: Warning: Detected 6 multi-output cells (for example, "gf180mcu_fd_sc_mcu7t5v0__addf_1").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+9.1.2. Re-integrating ABC results.
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__and2_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__and3_1 cells:        2
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__aoi21_1 cells:        2
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__aoi22_1 cells:        2
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__clkinv_1 cells:       26
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__mux2_1 cells:      137
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__mux4_1 cells:       38
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nand2_1 cells:       13
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nand3_1 cells:        9
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nand4_1 cells:        5
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nor2_1 cells:        8
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nor3_1 cells:        4
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nor4_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai211_1 cells:        2
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai21_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai22_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__or2_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__or4_1 cells:        2
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__xnor2_1 cells:        3
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__xor2_1 cells:        8
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__xor3_1 cells:        1
+ABC RESULTS:        internal signals:      215
+ABC RESULTS:           input signals:      158
+ABC RESULTS:          output signals:      170
+Removing temp directory.
+
+9.2. Extracting gate netlist of module `\uart_regs' to `<abc-temp-dir>/input.blif'..
+Extracted 325 gates and 435 wires to a netlist network with 110 inputs and 143 outputs.
+
+9.2.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.12 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__antenna" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_3".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_12".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_16".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__endcap" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_16" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_32" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_64" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_16" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_32" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_64" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__filltie" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__hold".
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtn_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtn_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtn_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_3".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_12".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_16".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffsnq_4".
+ABC: Library "gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80" from "/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80.lib" has 145 cells (84 skipped: 48 seq; 15 tri-state; 21 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.18 sec
+ABC: Memory =   30.19 MB. Time =     0.18 sec
+ABC: Warning: Detected 6 multi-output cells (for example, "gf180mcu_fd_sc_mcu7t5v0__addf_1").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+9.2.2. Re-integrating ABC results.
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__and2_1 cells:        5
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__and3_1 cells:        2
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__aoi211_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__aoi21_1 cells:        3
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__aoi222_1 cells:        6
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__aoi22_1 cells:        6
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__clkinv_1 cells:       59
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__mux2_1 cells:       84
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nand2_1 cells:       16
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nand3_1 cells:       10
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nand4_1 cells:        3
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nor2_1 cells:       10
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nor3_1 cells:        5
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nor4_1 cells:        6
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai211_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai21_1 cells:        8
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai31_1 cells:        2
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__or2_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__or3_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__or4_1 cells:        3
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__xnor2_1 cells:        3
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__xor2_1 cells:        7
+ABC RESULTS:        internal signals:      182
+ABC RESULTS:           input signals:      110
+ABC RESULTS:          output signals:      143
+Removing temp directory.
+
+9.3. Extracting gate netlist of module `\uart_rx_top' to `<abc-temp-dir>/input.blif'..
+Extracted 215 gates and 246 wires to a netlist network with 31 inputs and 32 outputs.
+
+9.3.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.12 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__antenna" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_3".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_12".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_16".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__endcap" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_16" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_32" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_64" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_16" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_32" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_64" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__filltie" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__hold".
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtn_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtn_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtn_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_3".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_12".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_16".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffsnq_4".
+ABC: Library "gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80" from "/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80.lib" has 145 cells (84 skipped: 48 seq; 15 tri-state; 21 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.18 sec
+ABC: Memory =   30.19 MB. Time =     0.18 sec
+ABC: Warning: Detected 6 multi-output cells (for example, "gf180mcu_fd_sc_mcu7t5v0__addf_1").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+9.3.2. Re-integrating ABC results.
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__and2_1 cells:        4
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__and4_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__aoi21_1 cells:        7
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__aoi22_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__clkinv_1 cells:       19
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__mux2_1 cells:       15
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nand2_1 cells:       12
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nand3_1 cells:       12
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nand4_1 cells:        3
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nor2_1 cells:       14
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nor3_1 cells:        4
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nor4_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai211_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai21_1 cells:       10
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai221_1 cells:        3
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__or3_1 cells:        2
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__or4_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__xor2_1 cells:        5
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__xor3_1 cells:        2
+ABC RESULTS:        internal signals:      183
+ABC RESULTS:           input signals:       31
+ABC RESULTS:          output signals:       32
+Removing temp directory.
+
+9.4. Extracting gate netlist of module `\uart_top' to `<abc-temp-dir>/input.blif'..
+Extracted 0 gates and 0 wires to a netlist network with 0 inputs and 0 outputs.
+Don't call ABC as there is nothing to map.
+Removing temp directory.
+
+9.5. Extracting gate netlist of module `\uart_tx_top' to `<abc-temp-dir>/input.blif'..
+Extracted 232 gates and 281 wires to a netlist network with 49 inputs and 54 outputs.
+
+9.5.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.12 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__antenna" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_3".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_12".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__bufz_16".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffnsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__dffsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__endcap" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_16" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_32" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fill_64" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_16" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_32" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__fillcap_64" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__filltie" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__hold".
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtn_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtn_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtn_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtp_1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtp_2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "gf180mcu_fd_sc_mcu7t5v0__icgtp_4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_3".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_12".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "gf180mcu_fd_sc_mcu7t5v0__invz_16".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__latsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffrsnq_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffsnq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffsnq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "gf180mcu_fd_sc_mcu7t5v0__sdffsnq_4".
+ABC: Library "gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80" from "/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_1v80.lib" has 145 cells (84 skipped: 48 seq; 15 tri-state; 21 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.18 sec
+ABC: Memory =   30.19 MB. Time =     0.18 sec
+ABC: Warning: Detected 6 multi-output cells (for example, "gf180mcu_fd_sc_mcu7t5v0__addf_1").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+9.5.2. Re-integrating ABC results.
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__and2_1 cells:        2
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__and4_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__aoi211_1 cells:        2
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__aoi21_1 cells:        6
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__aoi221_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__aoi22_1 cells:        3
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__clkinv_1 cells:       33
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__mux2_1 cells:       23
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nand2_1 cells:       13
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nand3_1 cells:        3
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nor2_1 cells:       17
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nor3_1 cells:        4
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__nor4_1 cells:        2
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai211_1 cells:        2
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai21_1 cells:        9
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai22_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai31_1 cells:        5
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__oai32_1 cells:        2
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__or2_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__or3_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__xnor2_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__xnor3_1 cells:        1
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__xor2_1 cells:        6
+ABC RESULTS:   gf180mcu_fd_sc_mcu7t5v0__xor3_1 cells:        2
+ABC RESULTS:        internal signals:      178
+ABC RESULTS:           input signals:       49
+ABC RESULTS:          output signals:       54
+Removing temp directory.
+Removed 0 unused cells and 1484 unused wires.
+
+10. Executing Verilog backend.
+
+10.1. Executing BMUXMAP pass.
+
+10.2. Executing DEMUXMAP pass.
+Dumping module `\fifo_top'.
+Dumping module `\uart_regs'.
+Dumping module `\uart_rx_top'.
+Dumping module `\uart_top'.
+Dumping module `\uart_tx_top'.
+
+11. Printing statistics.
+
+=== fifo_top ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      292        - wires
+      431        - wire bits
+      292        - public wires
+      431        - public wire bits
+       13        - ports
+       30        - port bits
+      411 1.74E+04 cells
+        1   17.562   gf180mcu_fd_sc_mcu7t5v0__and2_1
+        2   43.904   gf180mcu_fd_sc_mcu7t5v0__and3_1
+        2   35.123   gf180mcu_fd_sc_mcu7t5v0__aoi21_1
+        2   39.514   gf180mcu_fd_sc_mcu7t5v0__aoi22_1
+       26  228.301   gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+      128 8.15E+03   gf180mcu_fd_sc_mcu7t5v0__dffq_1
+       16 1.19E+03   gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+      137 3.91E+03   gf180mcu_fd_sc_mcu7t5v0__mux2_1
+       38 2.67E+03   gf180mcu_fd_sc_mcu7t5v0__mux4_1
+       13  142.688   gf180mcu_fd_sc_mcu7t5v0__nand2_1
+        9  138.298   gf180mcu_fd_sc_mcu7t5v0__nand3_1
+        5   98.784   gf180mcu_fd_sc_mcu7t5v0__nand4_1
+        8   105.37   gf180mcu_fd_sc_mcu7t5v0__nor2_1
+        4   70.246   gf180mcu_fd_sc_mcu7t5v0__nor3_1
+        1   21.952   gf180mcu_fd_sc_mcu7t5v0__nor4_1
+        2   43.904   gf180mcu_fd_sc_mcu7t5v0__oai211_1
+        1   17.562   gf180mcu_fd_sc_mcu7t5v0__oai21_1
+        1   21.952   gf180mcu_fd_sc_mcu7t5v0__oai22_1
+        1   17.562   gf180mcu_fd_sc_mcu7t5v0__or2_1
+        2   52.685   gf180mcu_fd_sc_mcu7t5v0__or4_1
+        3   85.613   gf180mcu_fd_sc_mcu7t5v0__xnor2_1
+        8  210.739   gf180mcu_fd_sc_mcu7t5v0__xor2_1
+        1    50.49   gf180mcu_fd_sc_mcu7t5v0__xor3_1
+
+   Chip area for module '\fifo_top': 17364.032000
+     of which used for sequential elements: 9342.771200 (53.81%)
+
+=== uart_regs ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      273        - wires
+      430        - wire bits
+      273        - public wires
+      430        - public wire bits
+       25        - ports
+       93        - port bits
+      340 1.15E+04 cells
+        5   87.808   gf180mcu_fd_sc_mcu7t5v0__and2_1
+        2   43.904   gf180mcu_fd_sc_mcu7t5v0__and3_1
+        1   21.952   gf180mcu_fd_sc_mcu7t5v0__aoi211_1
+        3   52.685   gf180mcu_fd_sc_mcu7t5v0__aoi21_1
+        6  184.397   gf180mcu_fd_sc_mcu7t5v0__aoi222_1
+        6  118.541   gf180mcu_fd_sc_mcu7t5v0__aoi22_1
+       59  518.067   gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+       55  3.5E+03   gf180mcu_fd_sc_mcu7t5v0__dffq_1
+       43 3.21E+03   gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+       84  2.4E+03   gf180mcu_fd_sc_mcu7t5v0__mux2_1
+       16  175.616   gf180mcu_fd_sc_mcu7t5v0__nand2_1
+       10  153.664   gf180mcu_fd_sc_mcu7t5v0__nand3_1
+        3    59.27   gf180mcu_fd_sc_mcu7t5v0__nand4_1
+       10  131.712   gf180mcu_fd_sc_mcu7t5v0__nor2_1
+        5   87.808   gf180mcu_fd_sc_mcu7t5v0__nor3_1
+        6  131.712   gf180mcu_fd_sc_mcu7t5v0__nor4_1
+        1   21.952   gf180mcu_fd_sc_mcu7t5v0__oai211_1
+        8  140.493   gf180mcu_fd_sc_mcu7t5v0__oai21_1
+        2   48.294   gf180mcu_fd_sc_mcu7t5v0__oai31_1
+        1   17.562   gf180mcu_fd_sc_mcu7t5v0__or2_1
+        1   21.952   gf180mcu_fd_sc_mcu7t5v0__or3_1
+        3   79.027   gf180mcu_fd_sc_mcu7t5v0__or4_1
+        3   85.613   gf180mcu_fd_sc_mcu7t5v0__xnor2_1
+        7  184.397   gf180mcu_fd_sc_mcu7t5v0__xor2_1
+
+   Chip area for module '\uart_regs': 11474.310400
+     of which used for sequential elements: 6710.726400 (58.48%)
+
+=== uart_rx_top ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      136        - wires
+      152        - wire bits
+      136        - public wires
+      152        - public wire bits
+       13        - ports
+       21        - port bits
+      141 3.69E+03 cells
+        4   70.246   gf180mcu_fd_sc_mcu7t5v0__and2_1
+        1   24.147   gf180mcu_fd_sc_mcu7t5v0__and4_1
+        7  122.931   gf180mcu_fd_sc_mcu7t5v0__aoi21_1
+        1   19.757   gf180mcu_fd_sc_mcu7t5v0__aoi22_1
+       19  166.835   gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+       15  954.912   gf180mcu_fd_sc_mcu7t5v0__dffq_1
+        9  671.731   gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+       15  428.064   gf180mcu_fd_sc_mcu7t5v0__mux2_1
+       12  131.712   gf180mcu_fd_sc_mcu7t5v0__nand2_1
+       12  184.397   gf180mcu_fd_sc_mcu7t5v0__nand3_1
+        3    59.27   gf180mcu_fd_sc_mcu7t5v0__nand4_1
+       14  184.397   gf180mcu_fd_sc_mcu7t5v0__nor2_1
+        4   70.246   gf180mcu_fd_sc_mcu7t5v0__nor3_1
+        1   21.952   gf180mcu_fd_sc_mcu7t5v0__nor4_1
+        1   21.952   gf180mcu_fd_sc_mcu7t5v0__oai211_1
+       10  175.616   gf180mcu_fd_sc_mcu7t5v0__oai21_1
+        3   79.027   gf180mcu_fd_sc_mcu7t5v0__oai221_1
+        2   43.904   gf180mcu_fd_sc_mcu7t5v0__or3_1
+        1   26.342   gf180mcu_fd_sc_mcu7t5v0__or4_1
+        5  131.712   gf180mcu_fd_sc_mcu7t5v0__xor2_1
+        2  100.979   gf180mcu_fd_sc_mcu7t5v0__xor3_1
+
+   Chip area for module '\uart_rx_top': 3690.131200
+     of which used for sequential elements: 1626.643200 (44.08%)
+
+=== uart_top ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       34        - wires
+      116        - wire bits
+       34        - public wires
+      116        - public wire bits
+        9        - ports
+       25        - port bits
+        5        - submodules
+        2        -   fifo_top
+        1        -   uart_regs
+        1        -   uart_rx_top
+        1        -   uart_tx_top
+
+   Chip area for module '\uart_top': 0.000000
+     of which used for sequential elements: 0.000000 (-nan%)
+
+=== uart_tx_top ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      163        - wires
+      192        - wire bits
+      163        - public wires
+      192        - public wire bits
+       14        - ports
+       22        - port bits
+      173 4.85E+03 cells
+        2   35.123   gf180mcu_fd_sc_mcu7t5v0__and2_1
+        1   24.147   gf180mcu_fd_sc_mcu7t5v0__and4_1
+        2   43.904   gf180mcu_fd_sc_mcu7t5v0__aoi211_1
+        6   105.37   gf180mcu_fd_sc_mcu7t5v0__aoi21_1
+        1   24.147   gf180mcu_fd_sc_mcu7t5v0__aoi221_1
+        3    59.27   gf180mcu_fd_sc_mcu7t5v0__aoi22_1
+       33  289.766   gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+       10  636.608   gf180mcu_fd_sc_mcu7t5v0__dffq_1
+       16 1.19E+03   gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+        6  474.163   gf180mcu_fd_sc_mcu7t5v0__dffsnq_1
+       23  656.365   gf180mcu_fd_sc_mcu7t5v0__mux2_1
+       13  142.688   gf180mcu_fd_sc_mcu7t5v0__nand2_1
+        3   46.099   gf180mcu_fd_sc_mcu7t5v0__nand3_1
+       17   223.91   gf180mcu_fd_sc_mcu7t5v0__nor2_1
+        4   70.246   gf180mcu_fd_sc_mcu7t5v0__nor3_1
+        2   43.904   gf180mcu_fd_sc_mcu7t5v0__nor4_1
+        2   43.904   gf180mcu_fd_sc_mcu7t5v0__oai211_1
+        9  158.054   gf180mcu_fd_sc_mcu7t5v0__oai21_1
+        1   21.952   gf180mcu_fd_sc_mcu7t5v0__oai22_1
+        5  120.736   gf180mcu_fd_sc_mcu7t5v0__oai31_1
+        2   52.685   gf180mcu_fd_sc_mcu7t5v0__oai32_1
+        1   17.562   gf180mcu_fd_sc_mcu7t5v0__or2_1
+        1   21.952   gf180mcu_fd_sc_mcu7t5v0__or3_1
+        1   28.538   gf180mcu_fd_sc_mcu7t5v0__xnor2_1
+        1   52.685   gf180mcu_fd_sc_mcu7t5v0__xnor3_1
+        6  158.054   gf180mcu_fd_sc_mcu7t5v0__xor2_1
+        2  100.979   gf180mcu_fd_sc_mcu7t5v0__xor3_1
+
+   Chip area for module '\uart_tx_top': 4847.001600
+     of which used for sequential elements: 2304.960000 (47.55%)
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+     1476 5.47E+04 uart_top
+      411 1.74E+04 fifo_top
+      340 1.15E+04 uart_regs
+      141 3.69E+03 uart_rx_top
+      173 4.85E+03 uart_tx_top
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+     1190        - wires
+     1752        - wire bits
+     1190        - public wires
+     1752        - public wire bits
+       87        - ports
+      221        - port bits
+        -        - memories
+        -        - memory bits
+        -        - processes
+     1476 5.47E+04 cells
+       13  228.301   gf180mcu_fd_sc_mcu7t5v0__and2_1
+        6  131.712   gf180mcu_fd_sc_mcu7t5v0__and3_1
+        2   48.294   gf180mcu_fd_sc_mcu7t5v0__and4_1
+        3   65.856   gf180mcu_fd_sc_mcu7t5v0__aoi211_1
+       20  351.232   gf180mcu_fd_sc_mcu7t5v0__aoi21_1
+        1   24.147   gf180mcu_fd_sc_mcu7t5v0__aoi221_1
+        6  184.397   gf180mcu_fd_sc_mcu7t5v0__aoi222_1
+       14  276.595   gf180mcu_fd_sc_mcu7t5v0__aoi22_1
+      163  1431.27   gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+      336 2.14E+04   gf180mcu_fd_sc_mcu7t5v0__dffq_1
+      100  7463.68   gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+        6  474.163   gf180mcu_fd_sc_mcu7t5v0__dffsnq_1
+      396 1.13E+04   gf180mcu_fd_sc_mcu7t5v0__mux2_1
+       76 5.34E+03   gf180mcu_fd_sc_mcu7t5v0__mux4_1
+       67  735.392   gf180mcu_fd_sc_mcu7t5v0__nand2_1
+       43  660.755   gf180mcu_fd_sc_mcu7t5v0__nand3_1
+       16  316.109   gf180mcu_fd_sc_mcu7t5v0__nand4_1
+       57  750.758   gf180mcu_fd_sc_mcu7t5v0__nor2_1
+       21  368.794   gf180mcu_fd_sc_mcu7t5v0__nor3_1
+       11  241.472   gf180mcu_fd_sc_mcu7t5v0__nor4_1
+        8  175.616   gf180mcu_fd_sc_mcu7t5v0__oai211_1
+       29  509.286   gf180mcu_fd_sc_mcu7t5v0__oai21_1
+        3   79.027   gf180mcu_fd_sc_mcu7t5v0__oai221_1
+        3   65.856   gf180mcu_fd_sc_mcu7t5v0__oai22_1
+        7   169.03   gf180mcu_fd_sc_mcu7t5v0__oai31_1
+        2   52.685   gf180mcu_fd_sc_mcu7t5v0__oai32_1
+        4   70.246   gf180mcu_fd_sc_mcu7t5v0__or2_1
+        4   87.808   gf180mcu_fd_sc_mcu7t5v0__or3_1
+        8  210.739   gf180mcu_fd_sc_mcu7t5v0__or4_1
+       10  285.376   gf180mcu_fd_sc_mcu7t5v0__xnor2_1
+        1   52.685   gf180mcu_fd_sc_mcu7t5v0__xnor3_1
+       34  895.642   gf180mcu_fd_sc_mcu7t5v0__xor2_1
+        6  302.938   gf180mcu_fd_sc_mcu7t5v0__xor3_1
+        5 5.47E+04 submodules
+        2 3.47E+04   fifo_top
+        1 1.15E+04   uart_regs
+        1 3.69E+03   uart_rx_top
+        1 4.85E+03   uart_tx_top
+
+   Chip area for top module '\uart_top': 54739.507200
+     of which used for sequential elements: 29327.872000 (53.58%)
+
+End of script. Logfile hash: 802787c5c0, CPU: user 0.64s system 0.05s, MEM: 86.15 MB peak
+Yosys 0.57 (git sha1 3aca86049, g++ 13.3.0-6ubuntu2~24.04 -fPIC -O3)
+Time spent: 69% 2x abc (1 sec), 5% 28x opt_expr (0 sec), ...
+[FLOW] Generating Constraints (CLK_PERIOD=10.0 ns)...
+[FLOW] Running STA...
+OpenSTA 2.6.0 b5f3a02b33 Copyright (c) 2024, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Warning: constraints.sdc line 2, set_input_delay relative to a clock defined on the same port/pin not allowed.
+[FLOW] Running Power Analysis...
+OpenSTA 2.6.0 b5f3a02b33 Copyright (c) 2024, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Warning: constraints.sdc line 2, set_input_delay relative to a clock defined on the same port/pin not allowed.
+Annotated 0 pin activities.
+
+synth -top $(TOP) 
+----------------------------------------
+Status               | PASS
+Cell Count           | 1476
+Area (um^2)          | 17364.032000
+Slack (ns)           | worst slack -16.54
+Power (W)            | 3.62e-03
+----------------------------------------
+
+synth -top $(TOP) -flatten
+----------------------------------------
+Status               | PASS
+Cell Count           | 1530
+Area (um^2)          | 52818.707200
+Slack (ns)           | worst slack -22.49
+Power (W)            | 5.16e-03
+----------------------------------------
+
