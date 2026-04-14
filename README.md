@@ -1,7 +1,7 @@
 # Agentic LLM-Driven RTL Generation with Automated Verification Feedback
 
 NTU EEE URECA Project (EEE25005)
-**Author:** Lee Hyunseung
+**Author:** Lee Hyunseung;
 **Supervisors:** Prof. Chang Chip Hong, Dr. Vivek Mohan, Dr. Viktor Schlegel
 
 An autonomous AI agent that generates Verilog RTL from natural-language specifications, verifies it through a complete open-source EDA flow, and iteratively corrects errors based on classified feedback — without requiring golden testbenches at generation time.
