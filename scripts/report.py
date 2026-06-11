@@ -272,6 +272,7 @@ def build_report(out_dir, rpt_dir="reports"):
     # lint
     lint_has_errors, lint_items = parse_lint_log(os.path.join(out_dir, "lint.log"))
     lint_warnings = [i for i in lint_items if i["severity"] == "warning"]
+    lint_warnings = [i for i in lint_warnings if i["tag"] not in {"EOFNEWLINE", "DECLFILENAME"}]
     lint_errors = [i for i in lint_items if i["severity"] == "error"]
 
     report["lint"]["warnings"] = lint_warnings

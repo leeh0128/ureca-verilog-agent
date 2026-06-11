@@ -28,7 +28,8 @@ CLK_PERIOD ?= 10.0
 
 # input candidates
 _RTL_CANDIDATES := $(wildcard rtl/*.v rtl/*.sv rtl/includes/*.v rtl/includes/*.sv)
-_TB_CANDIDATES  := $(firstword $(wildcard tb/*.v))
+_TB_CANDIDATES  := $(firstword $(wildcard tb/*.v tb/*.sv))
+_REF_CANDIDATES := $(wildcard tb/.ref/*.sv)
 
 # auto-configuration
 $(OUT)/design.mk: $(_RTL_CANDIDATES) $(_TB_CANDIDATES) scripts/manage_design.py
@@ -61,13 +62,19 @@ lint: $(OUT)/design.mk
 sim: $(OUT)/design.mk
 	@if [ -z "$(_TB_CANDIDATES)" ]; then echo "[ERR] No Testbench found in tb/"; exit 1; fi
 	@if [ "$(TOP)" = "UNKNOWN_TOP" ]; then echo "[ERR] No Top Module Found"; exit 1; fi
-	@if [ "$(TOP)" = "AMBIGUOUS_TOP" ]; then echo "[ERR] Multiple uninstantiated modules found. Please check hierarchy."; exit 1; fi
+	@if [ "$(TOP)" = "AMBIGUOUS_TOP" ]; then echo "[ERR] Multiple uninstantiated modules found."; exit 1; fi
 	@echo "[FLOW] Simulating $(TOP)..."
-	$(IVERILOG) -g2012 -o $(OUT)/sim.vvp -f $(OUT)/rtl.f $(_TB_CANDIDATES)
+	$(IVERILOG) -g2012 -o $(OUT)/sim.vvp -f $(OUT)/rtl.f $(_REF_CANDIDATES) $(_TB_CANDIDATES)
 	$(VVP) $(OUT)/sim.vvp | tee $(OUT)/sim.log
 	@[ -f waves.vcd ] && mv waves.vcd $(OUT)/waves.vcd || true
-	@grep "PASS" $(OUT)/sim.log > /dev/null || (echo "[SIM] FAILED: 'PASS' not found" && exit 1)
-	@echo "[SIM] PASSED"
+	@# Accept native "PASS" OR VerilogEval-style "Mismatches: 0 in N samples"
+	@if grep -qE "PASS|Mismatches:[[:space:]]*0[[:space:]]+in" $(OUT)/sim.log; then \
+	    echo "PASS" >> $(OUT)/sim.log; \
+	    echo "[SIM] PASSED"; \
+	else \
+	    echo "FAIL" >> $(OUT)/sim.log; \
+	    echo "[SIM] FAILED: no pass marker found in simulation output"; exit 1; \
+	fi
 
 # 2. synthesis
 synth: $(OUT)/design.mk
@@ -137,8 +144,8 @@ power: sim synth sdc
 	} > $(OUT)/power.tcl
 	@$(OPENSTA) -no_init -exit $(OUT)/power.tcl 
 
-# 6. Gate-Level Simulation (depends on synth)
-# Simulates the post-synthesis netlist against the same testbench using the GF180 cell functional models. Validates that synthesis preserved the RTL behaviour. If RTL sim PASSes but gl_sim FAILs, synthesis introduced a behavioural change.
+# 6. ate-Level Simulation (depends on synth)
+# simulates the post-synthesis netlist against the same testbench using the GF180 cell functional models. Validates that synthesis preserved the RTL behaviour. If RTL sim PASSes but gl_sim FAILs, synthesis introduced a behavioural change.
 gl_sim: synth
 	@if [ -z "$(_TB_CANDIDATES)" ]; then echo "[ERR] No testbench found in tb/"; exit 1; fi
 	@echo "[FLOW] Gate-Level Simulating $(TOP)..."
@@ -146,7 +153,7 @@ gl_sim: synth
 	@for f in $(GL_CELL_MODELS); do \
 	    if [ ! -f "$$f" ]; then \
 	        echo "[ERR] GF180 cell model not found: $$f"; \
-	        echo "[HINT] Check PDK_ROOT or list available libs with: ls $(PDK_ROOT)/gf180mcuD/libs.ref/*/verilog/"; \
+	        echo "[HINT] Check PDK_ROOT or list with: ls $(PDK_ROOT)/gf180mcuD/libs.ref/*/verilog/"; \
 	        exit 1; \
 	    fi; \
 	done
@@ -155,14 +162,18 @@ gl_sim: synth
 	    -DFUNCTIONAL -DUNIT_DELAY=#1 \
 	    $(GL_CELL_MODELS) \
 	    $(OUT)/netlist.v \
+	    $(_REF_CANDIDATES) \
 	    $(_TB_CANDIDATES) 2>&1 | tee $(OUT)/gl_sim_compile.log
 	$(VVP) $(OUT)/gl_sim.vvp | tee $(OUT)/gl_sim.log
 	@[ -f waves.vcd ] && mv waves.vcd $(OUT)/gl_waves.vcd || true
-	@grep "PASS" $(OUT)/gl_sim.log > /dev/null || (echo "[GL_SIM] FAILED: 'PASS' not found in gate-level simulation" && exit 1)
-	@echo "[GL_SIM] PASSED"
-
-#  TOKEN-EFFICIENT TARGETS (for use by LLM agents)
-# Wrap existing targets with output filtering to minimise log volume sent back to the agent. Use these instead of raw targets when running the agentic pipeline.
+	@if grep -qE "PASS|Mismatches:[[:space:]]*0[[:space:]]+in" $(OUT)/gl_sim.log; then \
+	    echo "[GL_SIM] PASSED"; \
+	else \
+	    echo "[GL_SIM] FAILED"; exit 1; \
+	fi
+	
+#  Token efficient targets (for use by LLM agents)
+# wrap existing targets with output filtering to minimise log volume sent back to the agent. Use these instead of raw targets when running the agentic pipeline.
 
 # Quick check: lint + sim, output filtered to last 30 lines
 quick: $(OUT)/design.mk

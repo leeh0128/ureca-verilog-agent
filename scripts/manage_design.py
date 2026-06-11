@@ -42,6 +42,11 @@ def analyze_rtl(rtl_files):
 
     for fpath in rtl_files:
         if not os.path.exists(fpath): continue
+        
+        norm = os.path.normpath(fpath)
+        if "/tb/" in norm or norm.startswith("tb/") or "/.ref/" in norm:
+            continue
+        
         with open(fpath, 'r') as f:
             raw = f.read()
             clean = strip_comments(raw)
@@ -69,6 +74,9 @@ def find_top(defined, instantiated):
     candidates = list(candidates)
     
     if not candidates: return "UNKNOWN_TOP"
+
+    if "TopModule" in defined:
+        return "TopModule"
     
     if len(candidates) > 1:
         # check if one is literally named "top" or "Top"

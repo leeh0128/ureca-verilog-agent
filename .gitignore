@@ -5,3 +5,26 @@ obj_dir/
 *.vcd
 __pycache__/
 *.log
+# Secrets
+.env
+*.key
+**/secrets*
+
+# Generated EDA artifacts
+out/
+*.vcd
+*.log
+netlist.v
+feedback.json
+*.tokens.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+archive_rtl/
+archive_tb/
+rtl_backup/
+tb_backup/
+others/
